@@ -4,23 +4,47 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Add a new Blog | Austin&#39;s blogs</title>
+    <title>数据结构-基本结构 | Austin&#39;s blogs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Austin">
     
 
     
-    <meta name="description" content="The blog system is build by Hexo! you can get document from documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub">
+    <meta name="description" content="定义数据结构是相互之间存在一种或多种特定关系的数据元素的集合
+分类1. 逻辑结构
+    集合结构， 线性结构， 树形结构， 图形结构
+2. 物理结构
+    顺序存储结构(如：数组)， 链接存储结构
+线性表[List]1.定义：零个或多个数据元素的有限序列， 数学定义(a1,a2....an)
+2. 特点：
+    1. 线性表是有限的
+    2. 线性表的元素个数n(n&amp;gt;=0)定义为线">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Add a new Blog">
-<meta property="og:url" content="http://yoursite.com/2015/10/03/new-a-blog/index.html">
+<meta property="og:title" content="数据结构-基本结构">
+<meta property="og:url" content="http://yoursite.com/2015/10/03/数据结构-1/index.html">
 <meta property="og:site_name" content="Austin's blogs">
-<meta property="og:description" content="The blog system is build by Hexo! you can get document from documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub">
-<meta property="og:updated_time" content="2015-10-03T10:33:22.049Z">
+<meta property="og:description" content="定义数据结构是相互之间存在一种或多种特定关系的数据元素的集合
+分类1. 逻辑结构
+    集合结构， 线性结构， 树形结构， 图形结构
+2. 物理结构
+    顺序存储结构(如：数组)， 链接存储结构
+线性表[List]1.定义：零个或多个数据元素的有限序列， 数学定义(a1,a2....an)
+2. 特点：
+    1. 线性表是有限的
+    2. 线性表的元素个数n(n&amp;gt;=0)定义为线">
+<meta property="og:updated_time" content="2015-10-03T14:31:43.768Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Add a new Blog">
-<meta name="twitter:description" content="The blog system is build by Hexo! you can get document from documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub">
+<meta name="twitter:title" content="数据结构-基本结构">
+<meta name="twitter:description" content="定义数据结构是相互之间存在一种或多种特定关系的数据元素的集合
+分类1. 逻辑结构
+    集合结构， 线性结构， 树形结构， 图形结构
+2. 物理结构
+    顺序存储结构(如：数组)， 链接存储结构
+线性表[List]1.定义：零个或多个数据元素的有限序列， 数学定义(a1,a2....an)
+2. 特点：
+    1. 线性表是有限的
+    2. 线性表的元素个数n(n&amp;gt;=0)定义为线">
 
     
     <link rel="alternative" href="/atom.xml" title="Austin&#39;s blogs" type="application/atom+xml">
@@ -77,14 +101,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/10/03/new-a-blog/" title="Add a new Blog" itemprop="url">Add a new Blog</a>
+      <a href="/2015/10/03/数据结构-1/" title="数据结构-基本结构" itemprop="url">数据结构-基本结构</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Austin" target="_blank" itemprop="author">Austin</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-03T10:33:22.049Z" itemprop="datePublished"> 发表于 2015-10-03</time>
+    <time datetime="2015-10-03T14:31:43.768Z" itemprop="datePublished"> 发表于 2015-10-03</time>
     
   </p>
 </header>
@@ -93,34 +117,61 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#step_into_hexo_project_root_directory"><span class="toc-number">1.1.</span> <span class="toc-text">step into hexo project root directory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post(a_new_blog)"><span class="toc-number">1.2.</span> <span class="toc-text">Create a new post(a new blog)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server_to_check"><span class="toc-number">1.3.</span> <span class="toc-text">Run server to check</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.4.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites,_in_this_will_automatic_deploy_to_github-"><span class="toc-number">1.5.</span> <span class="toc-text">Deploy to remote sites, in this will automatic deploy to github.</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分类"><span class="toc-number">2.</span> <span class="toc-text">分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线性表[List]"><span class="toc-number">3.</span> <span class="toc-text">线性表[List]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#栈"><span class="toc-number">4.</span> <span class="toc-text">栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#队列"><span class="toc-number">5.</span> <span class="toc-text">队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#树"><span class="toc-number">6.</span> <span class="toc-text">树</span></a></li></ol>
 		
 		</div>
 		
-		<p>The blog system is build by <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! you can get document from <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="step_into_hexo_project_root_directory">step into hexo project root directory</h3><pre><code>如： D:<span class="command">\Dev</span>_Env<span class="command">\Project</span><span class="command">\GitProject</span><span class="command">\hexo</span>
-</code></pre><h3 id="Create_a_new_post(a_new_blog)">Create a new post(a new blog)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server_to_check">Run server to check</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites,_in_this_will_automatic_deploy_to_github-">Deploy to remote sites, in this will automatic deploy to github.</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-  
+		<h2 id="定义">定义</h2><pre><code>数据结构是相互之间存在一种或多种特定关系的数据元素的集合
+</code></pre><h2 id="分类">分类</h2><pre><code><span class="number">1.</span> 逻辑结构
+    集合结构， 线性结构， 树形结构， 图形结构
+<span class="number">2.</span> 物理结构
+    顺序存储结构(如：数组)， 链接存储结构
+</code></pre><h2 id="线性表[List]">线性表[List]</h2><pre><code><span class="number">1.</span>定义：零个或多个数据元素的有限序列， 数学定义(a1,a2....an)
+<span class="number">2.</span> 特点：
+    <span class="number">1.</span> 线性表是有限的
+    <span class="number">2.</span> 线性表的元素个数n(n&gt;=<span class="number">0</span>)定义为线性表的长度， 当n=<span class="number">0</span>时， 成为空表
+    <span class="number">3.</span> 每个数据元素都有一个确定的位置
+    <span class="number">4.</span> 除第一个元素， 每个元素都有且只有一个前继元素
+    <span class="number">5.</span> 除最后一个元素，每个元素都有且只有一个后继元素
+<span class="number">3.</span> 在计算机中的存储方式
+    <span class="number">1.</span> 顺序存储(ArrayList)--查询快， 插入/删除慢
+    <span class="number">2.</span> 链接存储(LinkList)--插入/删除快， 查询慢
+</code></pre><h2 id="栈">栈</h2><pre><code><span class="number">1.</span> 定义: 栈是限定仅在表尾进行插入和删除操作的线性表
+    允许插入和删除操作的一端叫做栈顶(top)，另一端叫做栈底(bottom)
+<span class="number">2.</span> 特点：后进先出[<span class="keyword">Last</span> <span class="keyword">In</span> <span class="keyword">First</span> <span class="keyword">Out</span>]
+</code></pre><h2 id="队列">队列</h2><pre><code><span class="number">1.</span> 定义: 队列是只允许在一段进行插入操作，在另一端进行删除操作的线性表
+<span class="number">2.</span> 特点：先进先出[<span class="keyword">First</span> <span class="keyword">In</span> <span class="keyword">First</span> <span class="keyword">Out</span>]
+</code></pre><h2 id="树">树</h2><pre><code><span class="number">1.</span> 定义： 树是n(n&gt;=<span class="number">0</span>)个节点的有限集。n=<span class="number">0</span>时称为空树。
+<span class="number">2.</span> 特点： 前提-任意一颗非空树
+    <span class="number">1.</span> 有且仅有一个特定的根节点(Root)
+    <span class="number">2.</span> 当n&gt;<span class="number">1</span>时， 其余节点可分为m(m&gt;<span class="number">0</span>)个互不相交的有限集(T1,T2...Tn),其中每个集合本身又是一颗树，且称为根的子树
+                图一
+    <span class="number">3.</span> 结点分类: 树的结点包含一个数据元素及若干个指向起子树的分支
+        <span class="number">1.</span> 结点拥有的子树数目称为结点的度(Degree)
+        <span class="number">2.</span> 度为<span class="number">0</span>的结点称为叶(子)结点(Leaf)或者终端结点
+        <span class="number">3.</span> 度不为<span class="number">0</span>的结点称为分支结点或者非终端节点
+        <span class="number">4.</span> 除根结点之外，分支结点也称为内部结点
+        <span class="number">5.</span> 树的度是树内各结点的度的最大值
+        <span class="number">6.</span> 结点的子树的根称为该结点的孩子结点(Child),该结点称为孩子的双亲
+        <span class="number">7.</span> 同一个双亲的孩子之间互称为兄弟(Sibling)
+        <span class="number">8.</span> 结点的祖先是从根到该结点所经分支上的所有结点
+        <span class="number">9.</span> 结点的层次(Level)从根开始定义起， 根在第一层，根的孩子为第二层。树的结点的最大层次数称为树的深度(Depth)或高度
+        <span class="number">10.</span> 如果将树种结点的各子树看成从左至右室友次序，且不能互换的，则称为有序树，反之则称为无序树
+        <span class="number">11.</span> 深林是m(m&gt;=<span class="number">0</span>)棵互不相交的树的集合
+</code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Hexo-Blog/">Hexo Blog</a>
+  <a class="article-category-link" href="/categories/数据结构/">数据结构</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Hexo/">Hexo</a>
+  <span></span> <a href="/tags/ADT/">ADT</a>
   </div>
 
 </div>
@@ -129,7 +180,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/10/03/new-a-blog/" data-title="Add a new Blog | Austin&#39;s blogs" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/10/03/数据结构-1/" data-title="数据结构-基本结构 | Austin&#39;s blogs" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -142,14 +193,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/10/03/数据结构-1/" title="数据结构-基本结构">
-  <strong>上一篇：</strong><br/>
-  <span>
-  数据结构-基本结构</span>
+
+<div class="next">
+<a href="/2015/10/03/new-a-blog/"  title="Add a new Blog">
+ <strong>下一篇：</strong><br/> 
+ <span>Add a new Blog
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -161,7 +212,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#step_into_hexo_project_root_directory"><span class="toc-number">1.1.</span> <span class="toc-text">step into hexo project root directory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post(a_new_blog)"><span class="toc-number">1.2.</span> <span class="toc-text">Create a new post(a new blog)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server_to_check"><span class="toc-number">1.3.</span> <span class="toc-text">Run server to check</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.4.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites,_in_this_will_automatic_deploy_to_github-"><span class="toc-number">1.5.</span> <span class="toc-text">Deploy to remote sites, in this will automatic deploy to github.</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分类"><span class="toc-number">2.</span> <span class="toc-text">分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线性表[List]"><span class="toc-number">3.</span> <span class="toc-text">线性表[List]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#栈"><span class="toc-number">4.</span> <span class="toc-text">栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#队列"><span class="toc-number">5.</span> <span class="toc-text">队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#树"><span class="toc-number">6.</span> <span class="toc-text">树</span></a></li></ol>
  
   </div>
 
