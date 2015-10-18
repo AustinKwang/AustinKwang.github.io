@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Just Do it.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-08T13:12:53.477Z</updated>
+  <updated>2015-10-18T14:42:46.263Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[项目中的第三方框架升级]]></title>
+    <link href="http://yoursite.com/2015/10/18/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6%E5%8D%87%E7%BA%A7/"/>
+    <id>http://yoursite.com/2015/10/18/项目中的第三方框架升级/</id>
+    <published>2015-10-17T16:00:00.000Z</published>
+    <updated>2015-10-18T14:42:46.263Z</updated>
+    <content type="html"><![CDATA[<p>为公司内部做的一个运营系统， 由于在旧的系统基础上进行开发的， 系统是传统的SSH框架， Struts2使用的是2.3的版本，Spring使用过的是2.5.6的版本， Hibernate使用过的是3.0的版本， 在现在的开发中，通常会引入一些其他的第三方库， 在这些就得版本中， 通常会引发一些不知名的问题， 而且很难找到文档， 所以在这个周末， 下定决定，对其进行了升级。升级后的版本为：</p>
+<ol>
+<li>Struts： 未升级， 还是原来的2.3</li>
+<li>Spring ： 4.2.2</li>
+<li>Hibernate：4.3.11</li>
+</ol>
+<p>在升级过程中碰到了很多的细节问题， 也发现了现在系统中的代码存在一种问题：</p>
+<ol>
+<li>对于集合，很少使用了泛型， 造成了一些怪异的运行时错误</li>
+<li>很多废弃API，方法， 属性在使用</li>
+<li>大量的重复代码， 两个方法， 名字不同， 代码80%相识度</li>
+<li>为了一些不知道什么原因的逻辑， 存在一些奇怪的代码逻辑</li>
+</ol>
+<p>所以在这次升级时候，也进行了一次清理， 这么大的改动首要的就是要保证稳定性， 这也是很多开发不敢再原有项目中进行重构，反而为了避开项目中各种问题，而写一些特殊代码， 就导致了系统越来越臃肿，代码越来越难以管理， Bug越来越多。正对于此问题， 我们可以用大量的单元测试来保证系统在大面积重构之后，保证尽量少的Bug。</p>
+<p>同时在我们平时开发，写代码的时候也应该做到随时重构， 因为在写代码的时候通常会由于<strong>项目时间原因，对业务逻辑思考得不都清晰，对第三方库不熟悉， 测试代码</strong>等等原因，所以在这种情况下，应该做到随时重构。</p>
+<p>另外，在写代码过程中，尽量遵循一些原则：</p>
+<ol>
+<li>使用集合，List, Set, Map时，使用泛型，指定类型，避免编译错误</li>
+<li>尽量不使用废弃的方法， 属性，类</li>
+<li>在写一些工具类的时候， 尽量查找时候有类似，以及能够满足要求的工具类</li>
+<li>当在定义工具方法，类的时候， 做到分类别类，如 时间相关的就放在DateUtil.java类中， String处理相关的就放在StringUtil.java类中， 空判断相关的放在EmptyUtil.java类中</li>
+<li>使用更容易明白的名字，见名知其意，当然不能一次做到，可以多次更改</li>
+<li>对于相同的代码，尽量抽出方法， 也有助于理清代码逻辑</li>
+<li>保持方法简洁， 短小，一个方法只做一件事</li>
+<li>Java类应该遵循单一职责的原则</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>为公司内部做的一个运营系统， 由于在旧的系统基础上进行开发的， 系统是传统的SSH框架， Struts2使用的是2.3的版本，Spring使用过的是2.5.6的版本， Hibernate使用过的是3.0的版本， 在现在的开发中，通常会引入一些其他的第三方库， 在这些就得版本]]>
+    </summary>
+    
+      <category term="开发" scheme="http://yoursite.com/tags/%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="开发" scheme="http://yoursite.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2015/10/13/Gradle%E5%AD%A6%E4%B9%A0%5B1%5D/"/>
+    <id>http://yoursite.com/2015/10/13/Gradle学习[1]/</id>
+    <published>2015-10-13T15:08:04.838Z</published>
+    <updated>2015-10-13T15:08:04.838Z</updated>
+    <content type="html"><![CDATA[<h3 id="Gradle中的特征">Gradle中的特征</h3><ol>
+<li>声明式编译方式以及约定优于配置的方式</li>
+<li>编程式语言的的编写方式</li>
+<li>组织（结构化）编译</li>
+<li>深层次的API</li>
+<li>支持多项目编译</li>
+<li>多元化方式管理依赖</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="Gradle中的特征">Gradle中的特征</h3><ol>
+<li>声明式编译方式以及约定优于配置的方式</li>
+<li>编程式语言的的编写方式</li>
+<li>组织（结构化）编译</li>
+<li>深层次的API</li>
+<li>支持多项目编译</li]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Java异常]]></title>

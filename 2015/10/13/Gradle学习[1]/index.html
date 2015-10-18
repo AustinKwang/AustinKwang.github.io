@@ -4,29 +4,41 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Java异常 | Austin&#39;s blogs</title>
+    <title>Austin&#39;s blogs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Austin">
     
 
     
-    <meta name="description" content="Java中的异常分类
-Checked Exception(非Runtime Exception): 非运行时异常对于非运行时异常都直接继承自Exception类，这类异常会在编译期进行检查，并且必须进行处理(try.catch或者throw new Exception)注意:Exception类是多有异常类的父类，Java中的所有异常都会直接或间接地继承至Exception类
-1234567891">
+    <meta name="description" content="Gradle中的特征
+声明式编译方式以及约定优于配置的方式
+编程式语言的的编写方式
+组织（结构化）编译
+深层次的API
+支持多项目编译
+多元化方式管理依赖">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java异常">
-<meta property="og:url" content="http://yoursite.com/2015/10/08/Java异常/index.html">
+<meta property="og:title" content="Austin's blogs">
+<meta property="og:url" content="http://yoursite.com/2015/10/13/Gradle学习[1]/index.html">
 <meta property="og:site_name" content="Austin's blogs">
-<meta property="og:description" content="Java中的异常分类
-Checked Exception(非Runtime Exception): 非运行时异常对于非运行时异常都直接继承自Exception类，这类异常会在编译期进行检查，并且必须进行处理(try.catch或者throw new Exception)注意:Exception类是多有异常类的父类，Java中的所有异常都会直接或间接地继承至Exception类
-1234567891">
-<meta property="og:updated_time" content="2015-10-08T13:12:53.477Z">
+<meta property="og:description" content="Gradle中的特征
+声明式编译方式以及约定优于配置的方式
+编程式语言的的编写方式
+组织（结构化）编译
+深层次的API
+支持多项目编译
+多元化方式管理依赖">
+<meta property="og:updated_time" content="2015-10-13T15:08:04.838Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java异常">
-<meta name="twitter:description" content="Java中的异常分类
-Checked Exception(非Runtime Exception): 非运行时异常对于非运行时异常都直接继承自Exception类，这类异常会在编译期进行检查，并且必须进行处理(try.catch或者throw new Exception)注意:Exception类是多有异常类的父类，Java中的所有异常都会直接或间接地继承至Exception类
-1234567891">
+<meta name="twitter:title" content="Austin's blogs">
+<meta name="twitter:description" content="Gradle中的特征
+声明式编译方式以及约定优于配置的方式
+编程式语言的的编写方式
+组织（结构化）编译
+深层次的API
+支持多项目编译
+多元化方式管理依赖">
 
     
     <link rel="alternative" href="/atom.xml" title="Austin&#39;s blogs" type="application/atom+xml">
@@ -79,14 +91,14 @@ Checked Exception(非Runtime Exception): 非运行时异常对于非运行时异
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/10/08/Java异常/" title="Java异常" itemprop="url">Java异常</a>
+      <a href="/2015/10/13/Gradle学习[1]/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Austin" target="_blank" itemprop="author">Austin</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-07T16:00:00.000Z" itemprop="datePublished"> 发表于 2015-10-08</time>
+    <time datetime="2015-10-13T15:08:04.838Z" itemprop="datePublished"> 发表于 2015-10-13</time>
     
   </p>
 </header>
@@ -95,32 +107,23 @@ Checked Exception(非Runtime Exception): 非运行时异常对于非运行时异
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java中的异常分类"><span class="toc-number">1.</span> <span class="toc-text">Java中的异常分类</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Gradle中的特征"><span class="toc-number">1.</span> <span class="toc-text">Gradle中的特征</span></a></li></ol>
 		
 		</div>
 		
-		<h3 id="Java中的异常分类">Java中的异常分类</h3><ol>
-<li><p>Checked Exception(非Runtime Exception): 非运行时异常<br>对于非运行时异常都直接继承自Exception类，这类异常会在编译期进行检查，并且必须进行处理(try.catch或者throw new Exception)<br><strong>注意</strong>:Exception类是多有异常类的父类，Java中的所有异常都会直接或间接地继承至Exception类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> - 参数错误异常，当参数不符合规定时，抛出此异常</span><br><span class="line"> - <span class="doctag">@author</span> Austin.Wang</span><br><span class="line"> - <span class="doctag">@Date</span> Oct 8, 2015</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ParameterException</span> <span class="keyword">extends</span> <span class="title">Exception</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     - </span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ParameterException</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(<span class="string">"参数不能为空"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ParameterException</span><span class="params">(String msg)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(msg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Unchecked Exception(Runtime Exception):运行时异常<br>对于运行时异常RuntimeException类是Exception类的子类，　Java中的所有运行时异常都会直接或间接地继承至RuntimeException类，其他不是继承自RuntimeException的异常类都是非运行时异常</p>
-</li>
+		<h3 id="Gradle中的特征">Gradle中的特征</h3><ol>
+<li>声明式编译方式以及约定优于配置的方式</li>
+<li>编程式语言的的编写方式</li>
+<li>组织（结构化）编译</li>
+<li>深层次的API</li>
+<li>支持多项目编译</li>
+<li>多元化方式管理依赖</li>
 </ol>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/Java编程/">Java编程</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Java/">Java</a>
-  </div>
 
 </div>
 
@@ -128,7 +131,7 @@ Checked Exception(非Runtime Exception): 非运行时异常对于非运行时异
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/10/08/Java异常/" data-title="Java异常 | Austin&#39;s blogs" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/10/13/Gradle学习[1]/" data-title="Austin&#39;s blogs" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -142,18 +145,18 @@ Checked Exception(非Runtime Exception): 非运行时异常对于非运行时异
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/10/13/Gradle学习[1]/" title="">
+ <a href="/2015/10/18/项目中的第三方框架升级/" title="项目中的第三方框架升级">
   <strong>上一篇：</strong><br/>
   <span>
-  (no title)</span>
+  项目中的第三方框架升级</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/10/08/Mysql主从配置/"  title="MySQL主从数据库配置">
+<a href="/2015/10/08/Java异常/"  title="Java异常">
  <strong>下一篇：</strong><br/> 
- <span>MySQL主从数据库配置
+ <span>Java异常
 </span>
 </a>
 </div>
@@ -168,7 +171,7 @@ Checked Exception(非Runtime Exception): 非运行时异常对于非运行时异
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java中的异常分类"><span class="toc-number">1.</span> <span class="toc-text">Java中的异常分类</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Gradle中的特征"><span class="toc-number">1.</span> <span class="toc-text">Gradle中的特征</span></a></li></ol>
  
   </div>
 
