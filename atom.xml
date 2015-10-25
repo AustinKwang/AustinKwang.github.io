@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Just Do it.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-25T11:39:52.921Z</updated>
+  <updated>2015-10-25T23:31:03.550Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,13 +19,13 @@
     <link href="http://yoursite.com/2015/10/25/JavaScript_Deferred/"/>
     <id>http://yoursite.com/2015/10/25/JavaScript_Deferred/</id>
     <published>2015-10-24T16:00:00.000Z</published>
-    <updated>2015-10-25T11:39:52.921Z</updated>
+    <updated>2015-10-25T23:31:03.550Z</updated>
     <content type="html"><![CDATA[<h3 id="一-_概念">一. 概念</h3><ol>
-<li>Promise表示一个异步操作的最终结果</li>
-<li>Deferred：英文意思是“延迟”，也就是延迟到未来某个点在执行。在传统的Ajax请求中， 放请求回调时，存在着两个缺陷：<code>不管成功或者失败，都只能绑定一个回调函数</code>和和 ·<code>立即执行</code>。可以将我们的一些代码用于延迟执行。</li>
+<li>Promise， 为Deferred的超类， 表示一个异步操作的最终结果，promise无resolve()方法，只用来定义绑定回调函数， 在Ajax请求中，返回的Promise对象</li>
+<li>Deferred：英文意思是“延迟”，也就是延迟到未来某个点在执行。在传统的Ajax请求中， 放请求回调时，存在着两个缺陷：<code>不管成功或者失败，都只能绑定一个回调函数</code>和和 ·<code>立即执行</code>。可以将我们的一些代码用于延迟执行。首先我们需要绑定回调函数，然后通过如下方法来决定最终结果<br>testDeffed.resolve(参数); //执行done<br> testDeffed.reject(参数); //执行fail<h3 id="二-_使用">二. 使用</h3>常用的Promise为jquery的Promise, 可以参考JQuery API文档：[<a href="http://api.jquery.com/category/deferred-object/" target="_blank" rel="external">http://api.jquery.com/category/deferred-object/</a>]<br>我们在使用JQuery的Ajax操作的时候写法如下：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">        url:<span class="string">'index.html'</span>,</span><br><span class="line">        type:<span class="string">'GET'</span>,</span><br><span class="line">        success: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'成功'</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        error: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"出错啦"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<h3 id="二-_使用">二. 使用</h3><p>常用的Promise为jquery的Promise, 可以参考JQuery API文档：[<a href="http://api.jquery.com/category/deferred-object/" target="_blank" rel="external">http://api.jquery.com/category/deferred-object/</a>]<br>我们在使用JQuery的Ajax操作的时候写法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">        url:<span class="string">'index.html'</span>,</span><br><span class="line">        type:<span class="string">'GET'</span>,</span><br><span class="line">        success: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'成功'</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        error: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"出错啦"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
-<p>在上面的代码中，有两个回调方法， success方法与error方法.<br>success与error方法我们都只能绑定一个回调函数。<br>在有Deferred之后， 我们可以按照如下方式来写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> promise = $.ajax(&#123;</span><br><span class="line">      url:<span class="string">'index.html'</span>,</span><br><span class="line">        type:<span class="string">'GET'</span></span><br><span class="line">    &#125;);</span><br><span class="line">promise.done(funSuccess);</span><br><span class="line">promise.fail(funFailure);</span><br><span class="line">promise.always(funAways);</span><br></pre></td></tr></table></figure></p>
+<p>在上面的代码中，有两个回调方法， success方法与error方法.<br>success与error方法我们都只能绑定一个回调函数。<br>在有Deferred之后， 我们可以按照如下方式来写：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//返回的是promise对象， promise无resolve()方法，只用来定义绑定回调函数</span></span><br><span class="line"><span class="keyword">var</span> promise = $.ajax(&#123;</span><br><span class="line">      url:<span class="string">'index.html'</span>,</span><br><span class="line">        type:<span class="string">'GET'</span></span><br><span class="line">    &#125;);</span><br><span class="line">promise.done(funSuccess);</span><br><span class="line">promise.fail(funFailure);</span><br><span class="line">promise.always(funAways);</span><br></pre></td></tr></table></figure></p>
 <p>这种代码与上一份代码有以下好处：</p>
 <ol>
 <li>封装， 代码可读性更好</li>
@@ -45,8 +45,8 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="一-_概念">一. 概念</h3><ol>
-<li>Promise表示一个异步操作的最终结果</li>
-<li>Deferred：英文意思是“延迟”，也就是延迟到未来某个点在执行。在传统的Ajax请求中， 放请求回调时，存在着两个缺陷：<code>不管成功或者失败]]>
+<li>Promise， 为Deferred的超类， 表示一个异步操作的最终结果，promise无resolve()方法，只用来定义绑定回调函数， 在Ajax请求中，返回的Promise对象</li>
+<li>Defer]]>
     </summary>
     
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
