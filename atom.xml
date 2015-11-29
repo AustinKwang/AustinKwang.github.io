@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Just Do it.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-25T23:31:03.550Z</updated>
+  <updated>2015-11-29T08:31:11.381Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,190 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[开发相关文档网址记录]]></title>
+    <link href="http://yoursite.com/2015/11/29/%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2015/11/29/网址记录/</id>
+    <published>2015-11-28T16:00:00.000Z</published>
+    <updated>2015-11-29T08:31:11.381Z</updated>
+    <content type="html"><![CDATA[<h3 id="Java">Java</h3><ol>
+<li><a href="http://docs.oracle.com/en/" target="_blank" rel="external">Oracle文档中心</a></li>
+<li><a href="http://docs.oracle.com/javase/8/docs/" target="_blank" rel="external">JavaSE 8 doc</a></li>
+</ol>
+<h3 id="CSS">CSS</h3><ol>
+<li><a href="http://www.w3.org/TR/#tr_CSS" target="_blank" rel="external">W3C-CSS</a></li>
+<li><a href="http://www.w3.org/wiki/CSS/Training" target="_blank" rel="external">W3C-wiki</a></li>
+</ol>
+<h3 id="w3c_document">w3c document</h3><ol>
+<li><a href="http://www.w3.org/TR" target="_blank" rel="external">W3C文档中心</a></li>
+</ol>
+<h3 id="VPN">VPN</h3><ol>
+<li><a href="http://free-vpn.wwdhz.com/" target="_blank" rel="external">一小时VPN</a></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="Java">Java</h3><ol>
+<li><a href="http://docs.oracle.com/en/" target="_blank" rel="external">Oracle文档中心</a></li>
+<li><a href="http://]]>
+    </summary>
+    
+      <category term="Tools" scheme="http://yoursite.com/tags/Tools/"/>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[RequireJs使用]]></title>
+    <link href="http://yoursite.com/2015/11/20/RequireJs%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9/"/>
+    <id>http://yoursite.com/2015/11/20/RequireJs需要注意的地方/</id>
+    <published>2015-11-19T16:00:00.000Z</published>
+    <updated>2015-11-29T08:28:17.207Z</updated>
+    <content type="html"><![CDATA[<p>RequireJs<br>首先加载下载require.js<br>然后开始异步加载data-main指定的js<br>此时若已经在html末尾添加了script标签应用模块，是无法读取到data-main指定的js中的配置的。<br>因为data-main指定的js是异步加载的， 在执行的时候， mianJs还未执行</p>
+<p>main.js :<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">require</span><span class="class">.config</span>(&#123;</span><br><span class="line">	<span class="tag">paths</span>:&#123;</span><br><span class="line">		<span class="attribute">a1</span>: <span class="string">'a'</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="tag">console</span><span class="class">.log</span>(<span class="string">'MainJs'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>a.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>)</span>&#123;</span><br><span class="line"><span class="pi">	'use strict'</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'a'</span>);</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		test : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">'module a'</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>index.html<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>RequireJs Test<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">data-main</span>=<span class="value">"scripts/main.js"</span> <span class="attribute">src</span>=<span class="value">"scripts/require.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- &lt;script src="scripts/main.js"&gt;&lt;/script&gt; --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'start run'</span>);</span><br><span class="line">    <span class="built_in">require</span>([<span class="string">'a1'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">foo</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// var foo = require('a1');</span></span><br><span class="line">        foo.test();</span><br><span class="line">    &#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>执行顺序如下</p>
+<p>start run<br>MainJs<br>a<br>module a</p>
+<p>解决方式有二：</p>
+<ol>
+<li><p>在requirejs的script指定的地方不写data-main属性， 而在之前添加main.js的文件如下：</p>
+ <script src="static/qtinggame/scripts/components/requirejs/require.js"></script>
+ <script src="static/qtinggame/scripts/main.js?j=000"></script>
+</li>
+<li><p>为每一个需要单独加载js的文件指定独立data-main属性</p>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>RequireJs<br>首先加载下载require.js<br>然后开始异步加载data-main指定的js<br>此时若已经在html末尾添加了script标签应用模块，是无法读取到data-main指定的js中的配置的。<br>因为data-main指定的js是异步加]]>
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Front-end" scheme="http://yoursite.com/categories/Front-end/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[NodeJs的Process模块介绍]]></title>
+    <link href="http://yoursite.com/2015/11/10/Node%E7%9A%84Process%E6%A8%A1%E5%9D%97/"/>
+    <id>http://yoursite.com/2015/11/10/Node的Process模块/</id>
+    <published>2015-11-09T16:00:00.000Z</published>
+    <updated>2015-11-10T14:55:51.000Z</updated>
+    <content type="html"><![CDATA[<p>Process是有关当前进程的一个全局对象，不需要使用require加载就可以访问， 也是一个EventEmitter实例。详见Node API的Process部分</p>
+<h4 id="常用属性介绍">常用属性介绍</h4><p><strong>process.env</strong>： 当前用户的环境变量如：<br>    {<br>      TERM: ‘xterm-256color’,<br>      SHELL: ‘/usr/local/bin/bash’,<br>      USER: ‘maciej’,<br>      PATH: ‘~/.bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin’,<br>      PWD: ‘/Users/maciej’,<br>      EDITOR: ‘vim’,<br>      SHLVL: ‘1’,<br>      HOME: ‘/Users/maciej’,<br>      LOGNAME: ‘maciej’,<br>      _: ‘/usr/local/bin/node’<br>    }<br>    当运行web环境时候， 可通过 <code>process.env.PORT</code>来获取server运行的端口号</p>
+<p><strong>process.argv</strong>：当前进程的命令行参数数组。第一个元素为: node ,第二个元素为被调用js文件的名字， 剩下的就是参数了<br><strong>process.pid</strong>：当前进程的进程号。<br><strong>process.version</strong>：Node的版本，比如v0.10.18。<br><strong>process.platform</strong>：当前系统平台，比如Linux。<br><strong>process.title</strong>：默认值为“node”，可以自定义该值。<br><strong>process.env</strong>：指向当前shell的环境变量，比如process.env.HOME。<br><strong>process.execPath</strong>：运行当前进程的可执行文件的绝对路径。<br><strong>process.stdout</strong>：指向标准输出。<br><strong>process.stdin</strong>：指向标准输入。<br><strong>process.stderr</strong>：指向标准错误。</p>
+<h4 id="常用方法">常用方法</h4><p><strong>process.exit()</strong>：退出当前进程。<br><strong>process.cwd()</strong>：返回运行当前脚本的工作目录的路径。_<br><strong>process.chdir(‘/home/bbb)</strong>：改变工作目录。到 /home/bbb<br><strong>process.nextTick()</strong>：将一个回调函数放在下次事件循环的顶部</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Process是有关当前进程的一个全局对象，不需要使用require加载就可以访问， 也是一个EventEmitter实例。详见Node API的Process部分</p>
+<h4 id="常用属性介绍">常用属性介绍</h4><p><strong>process.env<]]>
+    </summary>
+    
+      <category term="NodeJs" scheme="http://yoursite.com/tags/NodeJs/"/>
+    
+      <category term="NodeJs" scheme="http://yoursite.com/categories/NodeJs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[NPM与Bower的区别]]></title>
+    <link href="http://yoursite.com/2015/11/04/Npm%E4%B8%8EBower/"/>
+    <id>http://yoursite.com/2015/11/04/Npm与Bower/</id>
+    <published>2015-11-03T16:00:00.000Z</published>
+    <updated>2015-11-29T08:30:05.748Z</updated>
+    <content type="html"><![CDATA[<p>npm（Node Package Manager）是nodejs时代不可或缺的最好的包管理器，会随nodejs官方包同时会安装。只要给项目书写好package.json放于项目根目录，就可以使用了<br>(<a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a>)<br>通过使用 npm install来重新部署项目<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure></p>
+<p>bower[A package manager for the web]主要用于web项目的包管理器:(<a href="http://bower.io" target="_blank" rel="external">http://bower.io</a>)</p>
+<ol>
+<li><p>安装</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> bower</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装依赖包</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bower <span class="operator"><span class="keyword">install</span> &lt;<span class="keyword">package</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>因为npm设计之初就采用了的是嵌套的依赖关系树，这种方式显然对前端不友好；而Bower则采用扁平的依赖关系管理方式，使用上更符合前端开发的使用习惯。</p>
+<p>NPM与Bower之间不同</p>
+<ol>
+<li>NPM主要作用于后端包管理， Bower作用于前端的组合使用模式。让前后端公用开发语言的同时，不同端的开发工程师能够更好地利用手上的工具提升开发效率。</li>
+<li>NPM主要运用于Node.js项目的内部依赖包管理，安装的模块位于项目根目录下的node_modules文件夹内。而Bower大部分情况下用于前端开发，对于CSS/JS/模板等内容进行依赖管理，依赖的下载目录结构可以自定义。</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>npm（Node Package Manager）是nodejs时代不可或缺的最好的包管理器，会随nodejs官方包同时会安装。只要给项目书写好package.json放于项目根目录，就可以使用了<br>(<a href="https://www.npmjs.com/" t]]>
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Front-end" scheme="http://yoursite.com/categories/Front-end/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Node全端开发脚手架介绍]]></title>
+    <link href="http://yoursite.com/2015/11/04/node%E5%85%A8%E7%AB%AF%E5%BC%80%E5%8F%91%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://yoursite.com/2015/11/04/node全端开发脚手架介绍/</id>
+    <published>2015-11-03T16:00:00.000Z</published>
+    <updated>2015-11-29T08:27:25.937Z</updated>
+    <content type="html"><![CDATA[<h3 id="全端开发分为前端与后端">全端开发分为前端与后端</h3><h4 id="前端">前端</h4><ol>
+<li>MVC框架<ol>
+<li>angluarJs: [<a href="https://angularjs.org/" target="_blank" rel="external">https://angularjs.org/</a>]</li>
+<li>emberJs: [<a href="http://emberjs.com/" target="_blank" rel="external">http://emberjs.com/</a>]</li>
+</ol>
+</li>
+</ol>
+<h4 id="后端">后端</h4><ol>
+<li>NodeJs: Javascript后端开发</li>
+<li>Express: Web应用(服务端)开发框架， </li>
+</ol>
+<h4 id="构建工具">构建工具</h4><ol>
+<li>Grunt：[<a href="http://www.gruntjs.net/" target="_blank" rel="external">http://www.gruntjs.net/</a>]</li>
+<li>Gulp: (<a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">http://www.gulpjs.com.cn/</a>)</li>
+</ol>
+<h4 id="项目结构生成器">项目结构生成器</h4><ol>
+<li>yeoman<br> yeoman-generator: [<a href="https://github.com/yeoman" target="_blank" rel="external">https://github.com/yeoman</a>]<br> generator-angular-fullstack: [<a href="https://github.com/DaftMonk/generator-angular-fullstack" target="_blank" rel="external">https://github.com/DaftMonk/generator-angular-fullstack</a>]</li>
+</ol>
+<p>Node中的一些知识点：<br>process.env ：获取到当前的环境变量<br>process.env.port：获取当前应用的端口号</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="全端开发分为前端与后端">全端开发分为前端与后端</h3><h4 id="前端">前端</h4><ol>
+<li>MVC框架<ol>
+<li>angluarJs: [<a href="https://angularjs.org/" target="_blank" ]]>
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Front-end" scheme="http://yoursite.com/categories/Front-end/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[使用 npm + grunt初始化(Angular + express)项目]]></title>
+    <link href="http://yoursite.com/2015/11/04/npm-grunt%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B7%A5%E7%A8%8B/"/>
+    <id>http://yoursite.com/2015/11/04/npm-grunt初始化工程/</id>
+    <published>2015-11-03T16:00:00.000Z</published>
+    <updated>2015-11-10T14:59:41.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="使用_npm_+_grunt初始化项目">使用 npm + grunt初始化项目</h2><h3 id="创建package-json文件，可以从其他项目产品copy修改，_也可以通过npm_init构建">创建package.json文件，可以从其他项目产品copy修改， 也可以通过npm init构建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+<p>按需要回答问题就好</p>
+<h3 id="安装grunt">安装grunt</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 安装到项目中</span></span><br><span class="line"><span class="comment">//--save-dev参数是说，把这个插件信息，同时添加到package.json的devDependencies中</span></span><br><span class="line"><span class="comment">//由于grunt仅在开发阶段使用，所以使用--save-dev。如果是运行时使用的，则用--save</span></span><br><span class="line">npm install grunt -<span class="keyword">g</span> </span><br><span class="line"><span class="comment">//安装全局 grunt-cli，用以调用grunt命令</span></span><br><span class="line">npm install grunt-<span class="keyword">cli</span> -<span class="keyword">g</span></span><br></pre></td></tr></table></figure>
+<p>##使用yeoman [<a href="http://yeoman.io/]初始化angular工程" target="_blank" rel="external">http://yeoman.io/]初始化angular工程</a></p>
+<h3 id="安装_yeoman">安装 yeoman</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> yo</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装generator">安装generator</h3><p>常规的generator可以在yeoman的github中找到[<a href="https://github.com/yeoman/yeoman" target="_blank" rel="external">https://github.com/yeoman/yeoman</a>]<br>安装generator-angular：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> generator-angular</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="初始化工程">初始化工程</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir angular-<span class="keyword">project</span></span><br><span class="line">cd angulary-<span class="keyword">project</span></span><br><span class="line">yo angular appName</span><br></pre></td></tr></table></figure>
+<h3 id="增加express作为后台Web_Server">增加express作为后台Web Server</h3><p>安装express模块<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> express <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
+<p>创建server.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>),</span><br><span class="line">  routes = <span class="built_in">require</span>(<span class="string">'./routes'</span>),</span><br><span class="line">  api = <span class="built_in">require</span>(<span class="string">'./routes/writeJson'</span>),</span><br><span class="line">  http = <span class="built_in">require</span>(<span class="string">'http'</span>),</span><br><span class="line">  path = <span class="built_in">require</span>(<span class="string">'path'</span>),</span><br><span class="line">  bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line">  multer=<span class="built_in">require</span>(<span class="string">'multer'</span>),</span><br><span class="line">  app =  express();</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Configuration</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// all environments</span></span><br><span class="line">app.set(<span class="string">'port'</span>, process.env.PORT || <span class="number">3000</span>);</span><br><span class="line">app.use(bodyParser.json()); <span class="comment">// for parsing application/json</span></span><br><span class="line">app.use(bodyParser.urlencoded(&#123; extended: <span class="literal">true</span> &#125;)); <span class="comment">// for parsing application</span></span><br><span class="line">app.use(serveStatic(__dirname + <span class="string">'/app'</span>));</span><br><span class="line">app.use(serveStatic(__dirname + <span class="string">'/bower_components'</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Routes</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">// redirect all others to the index (HTML5 history)</span></span><br><span class="line">app.get(<span class="string">'/'</span>, routes.index);</span><br><span class="line"></span><br><span class="line"><span class="comment">// JSON API</span></span><br><span class="line">app.post(<span class="string">'/api/save'</span>, api.writeJson);</span><br><span class="line">app.get(<span class="string">'/api/get'</span>, api.readJson);</span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Start Server</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line">http.createServer(app).listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Express server listening on port '</span> + app.get(<span class="string">'port'</span>));</span><br><span class="line">  <span class="built_in">console</span>.log(__dirname);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'--=='</span> + <span class="built_in">JSON</span>.stringify(process.env));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = app;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="使用_npm_+_grunt初始化项目">使用 npm + grunt初始化项目</h2><h3 id="创建package-json文件，可以从其他项目产品copy修改，_也可以通过npm_init构建">创建package.json文件，可以从其他项目产品co]]>
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Front-end" scheme="http://yoursite.com/categories/Front-end/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Deferred与Promise]]></title>
@@ -125,6 +309,23 @@
   </entry>
   
   <entry>
+    <title><![CDATA[MySQL主从数据库配置]]></title>
+    <link href="http://yoursite.com/2015/10/08/Mysql%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2015/10/08/Mysql主从配置/</id>
+    <published>2015-10-07T16:00:00.000Z</published>
+    <updated>2015-10-08T13:12:53.477Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+    
+      <category term="Developer" scheme="http://yoursite.com/categories/Developer/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Java异常]]></title>
     <link href="http://yoursite.com/2015/10/08/Java%E5%BC%82%E5%B8%B8/"/>
     <id>http://yoursite.com/2015/10/08/Java异常/</id>
@@ -146,23 +347,6 @@
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
       <category term="Java编程" scheme="http://yoursite.com/categories/Java%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[MySQL主从数据库配置]]></title>
-    <link href="http://yoursite.com/2015/10/08/Mysql%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2015/10/08/Mysql主从配置/</id>
-    <published>2015-10-07T16:00:00.000Z</published>
-    <updated>2015-10-08T13:12:53.477Z</updated>
-    <content type="html"></content>
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
-    
-      <category term="Developer" scheme="http://yoursite.com/categories/Developer/"/>
     
   </entry>
   
@@ -256,45 +440,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Windows下使用GUN(Linux)命令行]]></title>
-    <link href="http://yoursite.com/2015/10/04/MSYS-Mingw/"/>
-    <id>http://yoursite.com/2015/10/04/MSYS-Mingw/</id>
-    <published>2015-10-03T16:00:00.000Z</published>
-    <updated>2015-10-05T06:45:04.476Z</updated>
-    <content type="html"><![CDATA[<h2 id="在windows中使用LInux的命令。可以通过如下方法实现">在windows中使用LInux的命令。可以通过如下方法实现</h2><h3 id="1-_使用MinGW以及其中的Linux命令套件">1. 使用MinGW以及其中的Linux命令套件</h3><pre><code>1. 介绍
-    MinGW：Windows环境提供完整的开源编程工具集， 且不依赖于第三方的C运行库(DLLs), 只是一套最小化的GNU开发环境集合，并不提供GNU软件的运行环境，如需要运行环境，可以使用<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.cygwin.com/"</span>&gt;</span>Cygwin<span class="tag">&lt;/<span class="title">a</span>&gt;</span>或者
-    MSYS：是一套GUN工具集， 如 bash,make,gawk以及grep， 允许你通过传统的UNIX工具来构建应用， 其目标在于补充MinGW和CMD shell的不足，作为cmd.exe的替换.需要与MinGW同时使用
-2. 安装
-    1. 安装 MinGW， 且安装其中的MYSYS包
-        1. 从<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.mingw.org/"</span>&gt;</span>官网<span class="tag">&lt;/<span class="title">a</span>&gt;</span>下载安装包， 若使用64位,则从<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://mingw-w64.org/doku.php"</span>&gt;</span>mingw-w64<span class="tag">&lt;/<span class="title">a</span>&gt;</span>下载
-        2. 直接安装，注意安装路径中不能有空格，如：c:\mingw
-        3. 选择需要安装的工具包， 我这里选择了mingw-developer-toolkit与mingw32-base, 它会自动选择相关的依赖项
-    2. 第二种方式，只安装 MSYS
-        1. 从<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.mingw.org/wiki/MSYS"</span>&gt;</span>官网 <span class="tag">&lt;/<span class="title">a</span>&gt;</span>下载安装包
-        2. 直接安装，注意安装路径中不能有空格，如：c:\msys
-        3. 添加msys的安装目录到环境变量的path中，如： C:\msys\1.0
-3. 使用
-    1. 进入c:\mingw/msys/1.0或者 C:\msys\1.0，运行msys.bat.bat。打开的的cmd终端，不支持中文。
-    2. 为了支持中文，安装mintty终端，它支持xterm终端
-        1. 下载<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"https://code.google.com/p/mintty/downloads/list"</span>&gt;</span>mintty<span class="tag">&lt;/<span class="title">a</span>&gt;</span>的Msys版本
-        2. 解压，并copy mintty.exe文件到C:\MSYS\bin中
-        3. 打开编辑msys.bat文件，在适当位置添加:
-
-            <span class="comment"><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">set</span> MSYSCON=mintty.<span class="keyword">exe</span></span><br></pre></td></tr></table></figure></span>
-</code></pre><h3 id="2-_使用Git_bash">2. 使用Git bash</h3><pre><code>安装了git，就可以直接只用git-bash，git-bash也是基于M<span class="keyword">in</span>GW实现的。
-</code></pre><h3 id="3-_使用cmder">3. 使用cmder</h3><pre><code>1. 下载以及安装教程：<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"https://github.com/cmderdev/cmder"</span>&gt;</span>安装<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-</code></pre>]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="在windows中使用LInux的命令。可以通过如下方法实现">在windows中使用LInux的命令。可以通过如下方法实现</h2><h3 id="1-_使用MinGW以及其中的Linux命令套件">1. 使用MinGW以及其中的Linux命令套件</h3><p]]>
-    </summary>
-    
-      <category term="Tools" scheme="http://yoursite.com/tags/Tools/"/>
-    
-      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[数据结构-基本结构]]></title>
     <link href="http://yoursite.com/2015/10/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1/"/>
     <id>http://yoursite.com/2015/10/04/数据结构-1/</id>
@@ -351,11 +496,50 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Add a new Blog]]></title>
+    <title><![CDATA[Windows下使用GUN(Linux)命令行]]></title>
+    <link href="http://yoursite.com/2015/10/04/MSYS-Mingw/"/>
+    <id>http://yoursite.com/2015/10/04/MSYS-Mingw/</id>
+    <published>2015-10-03T16:00:00.000Z</published>
+    <updated>2015-10-05T06:45:04.476Z</updated>
+    <content type="html"><![CDATA[<h2 id="在windows中使用LInux的命令。可以通过如下方法实现">在windows中使用LInux的命令。可以通过如下方法实现</h2><h3 id="1-_使用MinGW以及其中的Linux命令套件">1. 使用MinGW以及其中的Linux命令套件</h3><pre><code>1. 介绍
+    MinGW：Windows环境提供完整的开源编程工具集， 且不依赖于第三方的C运行库(DLLs), 只是一套最小化的GNU开发环境集合，并不提供GNU软件的运行环境，如需要运行环境，可以使用<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.cygwin.com/"</span>&gt;</span>Cygwin<span class="tag">&lt;/<span class="title">a</span>&gt;</span>或者
+    MSYS：是一套GUN工具集， 如 bash,make,gawk以及grep， 允许你通过传统的UNIX工具来构建应用， 其目标在于补充MinGW和CMD shell的不足，作为cmd.exe的替换.需要与MinGW同时使用
+2. 安装
+    1. 安装 MinGW， 且安装其中的MYSYS包
+        1. 从<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.mingw.org/"</span>&gt;</span>官网<span class="tag">&lt;/<span class="title">a</span>&gt;</span>下载安装包， 若使用64位,则从<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://mingw-w64.org/doku.php"</span>&gt;</span>mingw-w64<span class="tag">&lt;/<span class="title">a</span>&gt;</span>下载
+        2. 直接安装，注意安装路径中不能有空格，如：c:\mingw
+        3. 选择需要安装的工具包， 我这里选择了mingw-developer-toolkit与mingw32-base, 它会自动选择相关的依赖项
+    2. 第二种方式，只安装 MSYS
+        1. 从<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.mingw.org/wiki/MSYS"</span>&gt;</span>官网 <span class="tag">&lt;/<span class="title">a</span>&gt;</span>下载安装包
+        2. 直接安装，注意安装路径中不能有空格，如：c:\msys
+        3. 添加msys的安装目录到环境变量的path中，如： C:\msys\1.0
+3. 使用
+    1. 进入c:\mingw/msys/1.0或者 C:\msys\1.0，运行msys.bat.bat。打开的的cmd终端，不支持中文。
+    2. 为了支持中文，安装mintty终端，它支持xterm终端
+        1. 下载<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"https://code.google.com/p/mintty/downloads/list"</span>&gt;</span>mintty<span class="tag">&lt;/<span class="title">a</span>&gt;</span>的Msys版本
+        2. 解压，并copy mintty.exe文件到C:\MSYS\bin中
+        3. 打开编辑msys.bat文件，在适当位置添加:
+
+            <span class="comment"><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">set</span> MSYSCON=mintty.<span class="keyword">exe</span></span><br></pre></td></tr></table></figure></span>
+</code></pre><h3 id="2-_使用Git_bash">2. 使用Git bash</h3><pre><code>安装了git，就可以直接只用git-bash，git-bash也是基于M<span class="keyword">in</span>GW实现的。
+</code></pre><h3 id="3-_使用cmder">3. 使用cmder</h3><pre><code>1. 下载以及安装教程：<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"https://github.com/cmderdev/cmder"</span>&gt;</span>安装<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="在windows中使用LInux的命令。可以通过如下方法实现">在windows中使用LInux的命令。可以通过如下方法实现</h2><h3 id="1-_使用MinGW以及其中的Linux命令套件">1. 使用MinGW以及其中的Linux命令套件</h3><p]]>
+    </summary>
+    
+      <category term="Tools" scheme="http://yoursite.com/tags/Tools/"/>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo Blog使用]]></title>
     <link href="http://yoursite.com/2015/10/03/new-a-blog/"/>
     <id>http://yoursite.com/2015/10/03/new-a-blog/</id>
     <published>2015-10-02T16:00:00.000Z</published>
-    <updated>2015-10-06T09:50:48.014Z</updated>
+    <updated>2015-11-14T13:03:29.000Z</updated>
     <content type="html"><![CDATA[<p>The blog system is build by <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! you can get document from <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="step_into_hexo_project_root_directory">step into hexo project root directory</h3><pre><code>如： D:<span class="command">\Dev</span>_Env<span class="command">\Project</span><span class="command">\GitProject</span><span class="command">\hexo</span>
 </code></pre><h3 id="Create_a_new_post(a_new_blog)">Create a new post(a new blog)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>

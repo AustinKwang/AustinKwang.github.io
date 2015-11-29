@@ -4,29 +4,62 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>项目中的第三方框架升级 | Austin&#39;s blogs</title>
+    <title>Node全端开发脚手架介绍 | Austin&#39;s blogs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Austin">
     
 
     
-    <meta name="description" content="为公司内部做的一个运营系统， 由于在旧的系统基础上进行开发的， 系统是传统的SSH框架， Struts2使用的是2.3的版本，Spring使用过的是2.5.6的版本， Hibernate使用过的是3.0的版本， 在现在的开发中，通常会引入一些其他的第三方库， 在这些就得版本中， 通常会引发一些不知名的问题， 而且很难找到文档， 所以在这个周末， 下定决定，对其进行了升级。升级后的版本为：
+    <meta name="description" content="全端开发分为前端与后端前端
+MVC框架
+angluarJs: [https://angularjs.org/]
+emberJs: [http://emberjs.com/]
 
-Str">
+
+
+后端
+NodeJs: Javascript后端开发
+Express: Web应用(服务端)开发框架， 
+
+构建工具
+Grunt：[http://www.gruntjs.net/]
+Gulp: (http://www.gu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="项目中的第三方框架升级">
-<meta property="og:url" content="http://yoursite.com/2015/10/18/项目中的第三方框架升级/index.html">
+<meta property="og:title" content="Node全端开发脚手架介绍">
+<meta property="og:url" content="http://yoursite.com/2015/11/04/node全端开发脚手架介绍/index.html">
 <meta property="og:site_name" content="Austin's blogs">
-<meta property="og:description" content="为公司内部做的一个运营系统， 由于在旧的系统基础上进行开发的， 系统是传统的SSH框架， Struts2使用的是2.3的版本，Spring使用过的是2.5.6的版本， Hibernate使用过的是3.0的版本， 在现在的开发中，通常会引入一些其他的第三方库， 在这些就得版本中， 通常会引发一些不知名的问题， 而且很难找到文档， 所以在这个周末， 下定决定，对其进行了升级。升级后的版本为：
+<meta property="og:description" content="全端开发分为前端与后端前端
+MVC框架
+angluarJs: [https://angularjs.org/]
+emberJs: [http://emberjs.com/]
 
-Str">
-<meta property="og:updated_time" content="2015-10-18T14:42:46.263Z">
+
+
+后端
+NodeJs: Javascript后端开发
+Express: Web应用(服务端)开发框架， 
+
+构建工具
+Grunt：[http://www.gruntjs.net/]
+Gulp: (http://www.gu">
+<meta property="og:updated_time" content="2015-11-29T08:27:25.937Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="项目中的第三方框架升级">
-<meta name="twitter:description" content="为公司内部做的一个运营系统， 由于在旧的系统基础上进行开发的， 系统是传统的SSH框架， Struts2使用的是2.3的版本，Spring使用过的是2.5.6的版本， Hibernate使用过的是3.0的版本， 在现在的开发中，通常会引入一些其他的第三方库， 在这些就得版本中， 通常会引发一些不知名的问题， 而且很难找到文档， 所以在这个周末， 下定决定，对其进行了升级。升级后的版本为：
+<meta name="twitter:title" content="Node全端开发脚手架介绍">
+<meta name="twitter:description" content="全端开发分为前端与后端前端
+MVC框架
+angluarJs: [https://angularjs.org/]
+emberJs: [http://emberjs.com/]
 
-Str">
+
+
+后端
+NodeJs: Javascript后端开发
+Express: Web应用(服务端)开发框架， 
+
+构建工具
+Grunt：[http://www.gruntjs.net/]
+Gulp: (http://www.gu">
 
     
     <link rel="alternative" href="/atom.xml" title="Austin&#39;s blogs" type="application/atom+xml">
@@ -79,14 +112,14 @@ Str">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/10/18/项目中的第三方框架升级/" title="项目中的第三方框架升级" itemprop="url">项目中的第三方框架升级</a>
+      <a href="/2015/11/04/node全端开发脚手架介绍/" title="Node全端开发脚手架介绍" itemprop="url">Node全端开发脚手架介绍</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Austin" target="_blank" itemprop="author">Austin</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-17T16:00:00.000Z" itemprop="datePublished"> 发表于 2015-10-18</time>
+    <time datetime="2015-11-03T16:00:00.000Z" itemprop="datePublished"> 发表于 2015-11-04</time>
     
   </p>
 </header>
@@ -95,36 +128,29 @@ Str">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#全端开发分为前端与后端"><span class="toc-number">1.</span> <span class="toc-text">全端开发分为前端与后端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#前端"><span class="toc-number">1.1.</span> <span class="toc-text">前端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#后端"><span class="toc-number">1.2.</span> <span class="toc-text">后端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#构建工具"><span class="toc-number">1.3.</span> <span class="toc-text">构建工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#项目结构生成器"><span class="toc-number">1.4.</span> <span class="toc-text">项目结构生成器</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p>为公司内部做的一个运营系统， 由于在旧的系统基础上进行开发的， 系统是传统的SSH框架， Struts2使用的是2.3的版本，Spring使用过的是2.5.6的版本， Hibernate使用过的是3.0的版本， 在现在的开发中，通常会引入一些其他的第三方库， 在这些就得版本中， 通常会引发一些不知名的问题， 而且很难找到文档， 所以在这个周末， 下定决定，对其进行了升级。升级后的版本为：</p>
-<ol>
-<li>Struts： 未升级， 还是原来的2.3</li>
-<li>Spring ： 4.2.2</li>
-<li>Hibernate：4.3.11</li>
+		<h3 id="全端开发分为前端与后端">全端开发分为前端与后端</h3><h4 id="前端">前端</h4><ol>
+<li>MVC框架<ol>
+<li>angluarJs: [<a href="https://angularjs.org/" target="_blank" rel="external">https://angularjs.org/</a>]</li>
+<li>emberJs: [<a href="http://emberjs.com/" target="_blank" rel="external">http://emberjs.com/</a>]</li>
 </ol>
-<p>在升级过程中碰到了很多的细节问题， 也发现了现在系统中的代码存在一种问题：</p>
-<ol>
-<li>对于集合，很少使用了泛型， 造成了一些怪异的运行时错误</li>
-<li>很多废弃API，方法， 属性在使用</li>
-<li>大量的重复代码， 两个方法， 名字不同， 代码80%相识度</li>
-<li>为了一些不知道什么原因的逻辑， 存在一些奇怪的代码逻辑</li>
+</li>
 </ol>
-<p>所以在这次升级时候，也进行了一次清理， 这么大的改动首要的就是要保证稳定性， 这也是很多开发不敢再原有项目中进行重构，反而为了避开项目中各种问题，而写一些特殊代码， 就导致了系统越来越臃肿，代码越来越难以管理， Bug越来越多。正对于此问题， 我们可以用大量的单元测试来保证系统在大面积重构之后，保证尽量少的Bug。</p>
-<p>同时在我们平时开发，写代码的时候也应该做到随时重构， 因为在写代码的时候通常会由于<strong>项目时间原因，对业务逻辑思考得不都清晰，对第三方库不熟悉， 测试代码</strong>等等原因，所以在这种情况下，应该做到随时重构。</p>
-<p>另外，在写代码过程中，尽量遵循一些原则：</p>
-<ol>
-<li>使用集合，List, Set, Map时，使用泛型，指定类型，避免编译错误</li>
-<li>尽量不使用废弃的方法， 属性，类</li>
-<li>在写一些工具类的时候， 尽量查找时候有类似，以及能够满足要求的工具类</li>
-<li>当在定义工具方法，类的时候， 做到分类别类，如 时间相关的就放在DateUtil.java类中， String处理相关的就放在StringUtil.java类中， 空判断相关的放在EmptyUtil.java类中</li>
-<li>使用更容易明白的名字，见名知其意，当然不能一次做到，可以多次更改</li>
-<li>对于相同的代码，尽量抽出方法， 也有助于理清代码逻辑</li>
-<li>保持方法简洁， 短小，一个方法只做一件事</li>
-<li>Java类应该遵循单一职责的原则</li>
+<h4 id="后端">后端</h4><ol>
+<li>NodeJs: Javascript后端开发</li>
+<li>Express: Web应用(服务端)开发框架， </li>
 </ol>
+<h4 id="构建工具">构建工具</h4><ol>
+<li>Grunt：[<a href="http://www.gruntjs.net/" target="_blank" rel="external">http://www.gruntjs.net/</a>]</li>
+<li>Gulp: (<a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">http://www.gulpjs.com.cn/</a>)</li>
+</ol>
+<h4 id="项目结构生成器">项目结构生成器</h4><ol>
+<li>yeoman<br> yeoman-generator: [<a href="https://github.com/yeoman" target="_blank" rel="external">https://github.com/yeoman</a>]<br> generator-angular-fullstack: [<a href="https://github.com/DaftMonk/generator-angular-fullstack" target="_blank" rel="external">https://github.com/DaftMonk/generator-angular-fullstack</a>]</li>
+</ol>
+<p>Node中的一些知识点：<br>process.env ：获取到当前的环境变量<br>process.env.port：获取当前应用的端口号</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -132,13 +158,13 @@ Str">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/开发/">开发</a>
+  <a class="article-category-link" href="/categories/Front-end/">Front-end</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/开发/">开发</a>
+  <span></span> <a href="/tags/前端/">前端</a>
   </div>
 
 </div>
@@ -147,7 +173,7 @@ Str">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/10/18/项目中的第三方框架升级/" data-title="项目中的第三方框架升级 | Austin&#39;s blogs" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/11/04/node全端开发脚手架介绍/" data-title="Node全端开发脚手架介绍 | Austin&#39;s blogs" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -161,18 +187,18 @@ Str">
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/10/25/JavaScript_Deferred/" title="Deferred与Promise">
+ <a href="/2015/11/04/Npm与Bower/" title="NPM与Bower的区别">
   <strong>上一篇：</strong><br/>
   <span>
-  Deferred与Promise</span>
+  NPM与Bower的区别</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/10/13/Gradle学习[1]/"  title="">
+<a href="/2015/11/04/npm-grunt初始化工程/"  title="使用 npm + grunt初始化(Angular + express)项目">
  <strong>下一篇：</strong><br/> 
- <span>(no title)
+ <span>使用 npm + grunt初始化(Angular + express)项目
 </span>
 </a>
 </div>
@@ -187,7 +213,7 @@ Str">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#全端开发分为前端与后端"><span class="toc-number">1.</span> <span class="toc-text">全端开发分为前端与后端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#前端"><span class="toc-number">1.1.</span> <span class="toc-text">前端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#后端"><span class="toc-number">1.2.</span> <span class="toc-text">后端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#构建工具"><span class="toc-number">1.3.</span> <span class="toc-text">构建工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#项目结构生成器"><span class="toc-number">1.4.</span> <span class="toc-text">项目结构生成器</span></a></li></ol></li></ol>
  
   </div>
 
