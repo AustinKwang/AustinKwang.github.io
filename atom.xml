@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Just Do it.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-11-29T08:31:11.381Z</updated>
+  <updated>2015-12-12T09:17:01.019Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,10 +16,10 @@
   
   <entry>
     <title><![CDATA[开发相关文档网址记录]]></title>
-    <link href="http://yoursite.com/2015/11/29/%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95/"/>
-    <id>http://yoursite.com/2015/11/29/网址记录/</id>
-    <published>2015-11-28T16:00:00.000Z</published>
-    <updated>2015-11-29T08:31:11.381Z</updated>
+    <link href="http://yoursite.com/2015/12/09/%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2015/12/09/网址记录/</id>
+    <published>2015-12-08T16:00:00.000Z</published>
+    <updated>2015-12-12T09:17:01.019Z</updated>
     <content type="html"><![CDATA[<h3 id="Java">Java</h3><ol>
 <li><a href="http://docs.oracle.com/en/" target="_blank" rel="external">Oracle文档中心</a></li>
 <li><a href="http://docs.oracle.com/javase/8/docs/" target="_blank" rel="external">JavaSE 8 doc</a></li>
@@ -31,6 +31,9 @@
 <h3 id="w3c_document">w3c document</h3><ol>
 <li><a href="http://www.w3.org/TR" target="_blank" rel="external">W3C文档中心</a></li>
 </ol>
+<h3 id="极客学院各种文档">极客学院各种文档</h3><ol>
+<li><a href="http://wiki.jikexueyuan.com/" target="_blank" rel="external">极客学院Wiki</a></li>
+</ol>
 <h3 id="VPN">VPN</h3><ol>
 <li><a href="http://free-vpn.wwdhz.com/" target="_blank" rel="external">一小时VPN</a></li>
 </ol>
@@ -41,9 +44,71 @@
 <li><a href="http://]]>
     </summary>
     
-      <category term="Tools" scheme="http://yoursite.com/tags/Tools/"/>
+      <category term="工具" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[CSS定位]]></title>
+    <link href="http://yoursite.com/2015/12/03/CSS%E5%AE%9A%E4%BD%8D/"/>
+    <id>http://yoursite.com/2015/12/03/CSS定位/</id>
+    <published>2015-12-02T16:00:00.000Z</published>
+    <updated>2015-12-12T09:16:06.515Z</updated>
+    <content type="html"><![CDATA[<p>CSS 定位 (Positioning) 属性允许你对元素进行定位。CSS 有三种基本的定位机制：普通流、浮动和绝对定位, 除非专门指定，否则所有框都在普通流中定位</p>
+<h3 id="一-_普通流(文档流)">一. 普通流(文档流)</h3><p>在HTML中,默认情况的定位方式都是普通流(文档流).</p>
+<h3 id="二-浮动(使用float属性指定)">二.浮动(使用float属性指定)</h3><p>浮动: 浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止<br>由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。.</p>
+<p>，如果包含框太窄，无法容纳浮动元素，那么其它浮动块向下移动，直到有足够的空间。如果浮动元素的高度不同，那么当它们向下移动时可能被其它浮动元素“卡住”：</p>
+<p>浮动框旁边的行框被缩短，从而给浮动框留出空间，行框围绕浮动框。<br>因此，创建浮动框可以使文本围绕图像：</p>
+<p>要想阻止行框围绕浮动框，需要对该框应用 clear 属性。clear 属性的值可以是 left、right、both 或 none，它表示框的哪些边不应该挨着浮动框。</p>
+<h3 id="三-_定位(使用position属指定,_并且制定偏移量来确定位置,)">三. 定位(使用position属指定, 并且制定偏移量来确定位置,)</h3><p><strong><em>如果不指定偏移量, 将在原来位置</em>, 此时margin, padding属性的偏移量将用新的位置为起点*</strong></p>
+<ol>
+<li>相对定位:</li>
+<li>绝对定位: 绝对定位使元素的位置与文档流无关，因此不占据空间,在普通流(文档流)中不存在, 可以通过<br>z-index属性来制定层级显示绝对定位的元素的位置相对于<strong>*最近的已定位祖先元素</strong>，如果元素没有已定位的祖先元素，那么它的位置相对于<strong><em>最初的包含块</em></strong>。<br> <strong><em>最近的已定位祖先元素*</em></strong>: 通过position属性修饰过的元素</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>CSS 定位 (Positioning) 属性允许你对元素进行定位。CSS 有三种基本的定位机制：普通流、浮动和绝对定位, 除非专门指定，否则所有框都在普通流中定位</p>
+<h3 id="一-_普通流(文档流)">一. 普通流(文档流)</h3><p>在HTML中,默认情]]>
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[当你成了时间富翁以后]]></title>
+    <link href="http://yoursite.com/2015/11/29/%E5%BD%93%E4%BD%A0%E6%88%90%E4%BA%86%E6%97%B6%E9%97%B4%E5%AF%8C%E7%BF%81/"/>
+    <id>http://yoursite.com/2015/11/29/当你成了时间富翁/</id>
+    <published>2015-11-28T16:00:00.000Z</published>
+    <updated>2015-12-12T09:16:53.595Z</updated>
+    <content type="html"><![CDATA[<p>##人生哲理:当你成了时间富翁以后</p>
+<p>“时间是一种最稀有的资源。”这是美国管理学家杜拉克的一句名言。当你工作、学习十分忙碌时，往往惜秒如金，集中自己的大部精力而抛弃一些生活琐事。然而，有时也会出现另一种状况：你拥有很多可以自由支配的时间，成了一位“时间富翁”。这时候，你可能会出现哪些变化呢？</p>
+<p>1．<strong>你可能感到从未有过的疲劳和厌倦</strong>。美国曾有一家由小并大的新公司，合并后出现了60名清闲无事的职员。起初公司让他们提早回家，结果引起了其他700名职员的不满。后来只得重新决定手机充值卡让多余的职员也整天留在公司，这些人奉命在每天上午8时报到，下午4时40分回家，天天随便游荡，把时间花在阅读报纸、杂志、廉价书和打纸牌、下棋、针织或聊天上。一位女职员说：“嘿！开始我觉得这倒是很不错的。但现在我感到，这些日子比我一生所经历过的任何时刻更为困倦。我到家时便精疲力竭地躺下了。”</p>
+<p>2．<strong>你可能意志消沉，丧失追求成就的欲望</strong>。1958年，英国社会学家帕金森曾写《帕金森定律》一书，指出：人都需要刺激，对于脑力劳动者的刺激，有赖于他的成就大小。美国有一家研究核武器的公司。曾经碰到8000名科学家、工程师的时间过剩问题。因为在停止大气层试爆以后，有半数的科技人员不复需要了，但是公司并未解职，仍然继续留用，以期保持组织能量的完整。这样，有限的工作无法塞满多数人拥有的时间，一些被成就欲驱使的人受挫折，有身份意识的人变得神经过敏，大家都对自己身为专业人才的价值非常担心，士气衰退。</p>
+<p>3．<strong>你可能为了消磨过剩的时间</strong>。**对本是正当的爱好、娱乐失去分寸，无度地消遣，以致影响工作和学习。每当空暇的时候，打打牌、弈弈棋、聊聊天、逛逛马路，本来都是积极休息。但是，一上手就放不下，一连几小时，甚至通宵达旦，常年如一。</p>
+<p>4．<strong>你可能对正常的刺激反应过敏</strong>。试图借此消磨时间。在青年中最常见的是爱看热闹，喜欢瞎起哄。当时间多得使人感到寂寞时，偶尔有点小事，便会产生夸大的反应。马路上稍有动静，急忙赶去围观；一听有人争论，就怂恿别人打赌。</p>
+<p>5．<strong>你可能成为一个慢性子</strong>，说话、走路、吃东西、办事情，都是慢吞吞的。因为时间太富裕，就失去了时间的压力，没有紧迫感，以致作风拖拉，磨磨蹭蹭，办事效率不高。</p>
+<p>6．<strong>你可能产生病态的心理</strong>，甚至出现某种越轨的行为。据资料反映：“青少年不良行为大多发生在放学、下班和假日的时间里。”青少年的特点是好奇心重，求知欲强和“精力过剩”，当过剩时间得不到正当支配时，可能去赌博、打架、搞迷信活动、投寄无头信件，以及在异性交往方面行为不端。</p>
+<p>###那么，怎样才能防止时间过剩，以致有效地转化和使用时间呢？下面提供的几种方法很有参考价值。</p>
+<p>1．<strong>凡事都要准时</strong>：准时上学，准时开会、准时赴约，准时到职……一对初恋的情人如果不能准时赴约，将可能产生误会，甚至引起不必要的争吵，而浪费了宝贵的时间。</p>
+<p>2．<strong>要善于见缝插针，抓紧一切零敬、空加盟连锁店闲的时间</strong>。例如在坐轮船火车做长途旅行时，可以看看小说，阅读你有兴趣的书报，背诵外语单词；当你排队看病、等待理发时也可抓紧学习。</p>
+<p>3．<strong>养成脑勤、手勤的习惯，凡是今天要办的事，决不拖到明天</strong>。手边随时携带和准备一个简要的备忘录，记下每天要办事的要点。</p>
+<p>4．<strong>对一个管理者来说，十分重要的是要精简会议，简明扼要，要善于集中零零碎碎的时间</strong>。</p>
+<p>5．<strong>充分利用日历，在上面记下你所约定或允诺的所有诺言和约会</strong>。然后一一及时处理。</p>
+<p>请记住富兰克林的这句话：“<strong>你热爱生命吗？那么别浪费时间，因为时间是组成生命的材料。</strong>”</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>##人生哲理:当你成了时间富翁以后</p>
+<p>“时间是一种最稀有的资源。”这是美国管理学家杜拉克的一句名言。当你工作、学习十分忙碌时，往往惜秒如金，集中自己的大部精力而抛弃一些生活琐事。然而，有时也会出现另一种状况：你拥有很多可以自由支配的时间，成了一位“时间富翁”。这]]>
+    </summary>
+    
+      <category term="哲理" scheme="http://yoursite.com/tags/%E5%93%B2%E7%90%86/"/>
+    
+      <category term="哲理" scheme="http://yoursite.com/categories/%E5%93%B2%E7%90%86/"/>
     
   </entry>
   
@@ -52,7 +117,7 @@
     <link href="http://yoursite.com/2015/11/20/RequireJs%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%9C%B0%E6%96%B9/"/>
     <id>http://yoursite.com/2015/11/20/RequireJs需要注意的地方/</id>
     <published>2015-11-19T16:00:00.000Z</published>
-    <updated>2015-11-29T08:28:17.207Z</updated>
+    <updated>2015-12-12T09:14:44.378Z</updated>
     <content type="html"><![CDATA[<p>RequireJs<br>首先加载下载require.js<br>然后开始异步加载data-main指定的js<br>此时若已经在html末尾添加了script标签应用模块，是无法读取到data-main指定的js中的配置的。<br>因为data-main指定的js是异步加载的， 在执行的时候， mianJs还未执行</p>
 <p>main.js :<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">require</span><span class="class">.config</span>(&#123;</span><br><span class="line">	<span class="tag">paths</span>:&#123;</span><br><span class="line">		<span class="attribute">a1</span>: <span class="string">'a'</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="tag">console</span><span class="class">.log</span>(<span class="string">'MainJs'</span>);</span><br></pre></td></tr></table></figure></p>
 <p>a.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>)</span>&#123;</span><br><span class="line"><span class="pi">	'use strict'</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'a'</span>);</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		test : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">'module a'</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
@@ -75,7 +140,7 @@
     
       <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Front-end" scheme="http://yoursite.com/categories/Front-end/"/>
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -102,11 +167,37 @@
   </entry>
   
   <entry>
+    <title><![CDATA[使用 npm + grunt初始化(Angular + express)项目]]></title>
+    <link href="http://yoursite.com/2015/11/04/npm-grunt%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B7%A5%E7%A8%8B/"/>
+    <id>http://yoursite.com/2015/11/04/npm-grunt初始化工程/</id>
+    <published>2015-11-03T16:00:00.000Z</published>
+    <updated>2015-12-12T09:15:04.090Z</updated>
+    <content type="html"><![CDATA[<h2 id="使用_npm_+_grunt初始化项目">使用 npm + grunt初始化项目</h2><h3 id="创建package-json文件，可以从其他项目产品copy修改，_也可以通过npm_init构建">创建package.json文件，可以从其他项目产品copy修改， 也可以通过npm init构建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+<p>按需要回答问题就好</p>
+<h3 id="安装grunt">安装grunt</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 安装到项目中</span></span><br><span class="line"><span class="comment">//--save-dev参数是说，把这个插件信息，同时添加到package.json的devDependencies中</span></span><br><span class="line"><span class="comment">//由于grunt仅在开发阶段使用，所以使用--save-dev。如果是运行时使用的，则用--save</span></span><br><span class="line">npm install grunt -<span class="keyword">g</span> </span><br><span class="line"><span class="comment">//安装全局 grunt-cli，用以调用grunt命令</span></span><br><span class="line">npm install grunt-<span class="keyword">cli</span> -<span class="keyword">g</span></span><br></pre></td></tr></table></figure>
+<p>##使用yeoman [<a href="http://yeoman.io/]初始化angular工程" target="_blank" rel="external">http://yeoman.io/]初始化angular工程</a></p>
+<h3 id="安装_yeoman">安装 yeoman</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> yo</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装generator">安装generator</h3><p>常规的generator可以在yeoman的github中找到[<a href="https://github.com/yeoman/yeoman" target="_blank" rel="external">https://github.com/yeoman/yeoman</a>]<br>安装generator-angular：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> generator-angular</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="初始化工程">初始化工程</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir angular-<span class="keyword">project</span></span><br><span class="line">cd angulary-<span class="keyword">project</span></span><br><span class="line">yo angular appName</span><br></pre></td></tr></table></figure>
+<h3 id="增加express作为后台Web_Server">增加express作为后台Web Server</h3><p>安装express模块<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> express <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
+<p>创建server.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>),</span><br><span class="line">  routes = <span class="built_in">require</span>(<span class="string">'./routes'</span>),</span><br><span class="line">  api = <span class="built_in">require</span>(<span class="string">'./routes/writeJson'</span>),</span><br><span class="line">  http = <span class="built_in">require</span>(<span class="string">'http'</span>),</span><br><span class="line">  path = <span class="built_in">require</span>(<span class="string">'path'</span>),</span><br><span class="line">  bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line">  multer=<span class="built_in">require</span>(<span class="string">'multer'</span>),</span><br><span class="line">  app =  express();</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Configuration</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// all environments</span></span><br><span class="line">app.set(<span class="string">'port'</span>, process.env.PORT || <span class="number">3000</span>);</span><br><span class="line">app.use(bodyParser.json()); <span class="comment">// for parsing application/json</span></span><br><span class="line">app.use(bodyParser.urlencoded(&#123; extended: <span class="literal">true</span> &#125;)); <span class="comment">// for parsing application</span></span><br><span class="line">app.use(serveStatic(__dirname + <span class="string">'/app'</span>));</span><br><span class="line">app.use(serveStatic(__dirname + <span class="string">'/bower_components'</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Routes</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">// redirect all others to the index (HTML5 history)</span></span><br><span class="line">app.get(<span class="string">'/'</span>, routes.index);</span><br><span class="line"></span><br><span class="line"><span class="comment">// JSON API</span></span><br><span class="line">app.post(<span class="string">'/api/save'</span>, api.writeJson);</span><br><span class="line">app.get(<span class="string">'/api/get'</span>, api.readJson);</span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Start Server</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line">http.createServer(app).listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Express server listening on port '</span> + app.get(<span class="string">'port'</span>));</span><br><span class="line">  <span class="built_in">console</span>.log(__dirname);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'--=='</span> + <span class="built_in">JSON</span>.stringify(process.env));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = app;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="使用_npm_+_grunt初始化项目">使用 npm + grunt初始化项目</h2><h3 id="创建package-json文件，可以从其他项目产品copy修改，_也可以通过npm_init构建">创建package.json文件，可以从其他项目产品co]]>
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[NPM与Bower的区别]]></title>
     <link href="http://yoursite.com/2015/11/04/Npm%E4%B8%8EBower/"/>
     <id>http://yoursite.com/2015/11/04/Npm与Bower/</id>
     <published>2015-11-03T16:00:00.000Z</published>
-    <updated>2015-11-29T08:30:05.748Z</updated>
+    <updated>2015-12-12T09:14:53.338Z</updated>
     <content type="html"><![CDATA[<p>npm（Node Package Manager）是nodejs时代不可或缺的最好的包管理器，会随nodejs官方包同时会安装。只要给项目书写好package.json放于项目根目录，就可以使用了<br>(<a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a>)<br>通过使用 npm install来重新部署项目<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure></p>
 <p>bower[A package manager for the web]主要用于web项目的包管理器:(<a href="http://bower.io" target="_blank" rel="external">http://bower.io</a>)</p>
 <ol>
@@ -130,7 +221,7 @@
     
       <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Front-end" scheme="http://yoursite.com/categories/Front-end/"/>
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -139,7 +230,7 @@
     <link href="http://yoursite.com/2015/11/04/node%E5%85%A8%E7%AB%AF%E5%BC%80%E5%8F%91%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BB%8B%E7%BB%8D/"/>
     <id>http://yoursite.com/2015/11/04/node全端开发脚手架介绍/</id>
     <published>2015-11-03T16:00:00.000Z</published>
-    <updated>2015-11-29T08:27:25.937Z</updated>
+    <updated>2015-12-12T09:15:07.426Z</updated>
     <content type="html"><![CDATA[<h3 id="全端开发分为前端与后端">全端开发分为前端与后端</h3><h4 id="前端">前端</h4><ol>
 <li>MVC框架<ol>
 <li>angluarJs: [<a href="https://angularjs.org/" target="_blank" rel="external">https://angularjs.org/</a>]</li>
@@ -168,33 +259,7 @@
     
       <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Front-end" scheme="http://yoursite.com/categories/Front-end/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[使用 npm + grunt初始化(Angular + express)项目]]></title>
-    <link href="http://yoursite.com/2015/11/04/npm-grunt%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B7%A5%E7%A8%8B/"/>
-    <id>http://yoursite.com/2015/11/04/npm-grunt初始化工程/</id>
-    <published>2015-11-03T16:00:00.000Z</published>
-    <updated>2015-11-10T14:59:41.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="使用_npm_+_grunt初始化项目">使用 npm + grunt初始化项目</h2><h3 id="创建package-json文件，可以从其他项目产品copy修改，_也可以通过npm_init构建">创建package.json文件，可以从其他项目产品copy修改， 也可以通过npm init构建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
-<p>按需要回答问题就好</p>
-<h3 id="安装grunt">安装grunt</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 安装到项目中</span></span><br><span class="line"><span class="comment">//--save-dev参数是说，把这个插件信息，同时添加到package.json的devDependencies中</span></span><br><span class="line"><span class="comment">//由于grunt仅在开发阶段使用，所以使用--save-dev。如果是运行时使用的，则用--save</span></span><br><span class="line">npm install grunt -<span class="keyword">g</span> </span><br><span class="line"><span class="comment">//安装全局 grunt-cli，用以调用grunt命令</span></span><br><span class="line">npm install grunt-<span class="keyword">cli</span> -<span class="keyword">g</span></span><br></pre></td></tr></table></figure>
-<p>##使用yeoman [<a href="http://yeoman.io/]初始化angular工程" target="_blank" rel="external">http://yeoman.io/]初始化angular工程</a></p>
-<h3 id="安装_yeoman">安装 yeoman</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> yo</span></span><br></pre></td></tr></table></figure>
-<h3 id="安装generator">安装generator</h3><p>常规的generator可以在yeoman的github中找到[<a href="https://github.com/yeoman/yeoman" target="_blank" rel="external">https://github.com/yeoman/yeoman</a>]<br>安装generator-angular：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> generator-angular</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="初始化工程">初始化工程</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir angular-<span class="keyword">project</span></span><br><span class="line">cd angulary-<span class="keyword">project</span></span><br><span class="line">yo angular appName</span><br></pre></td></tr></table></figure>
-<h3 id="增加express作为后台Web_Server">增加express作为后台Web Server</h3><p>安装express模块<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> express <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
-<p>创建server.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>),</span><br><span class="line">  routes = <span class="built_in">require</span>(<span class="string">'./routes'</span>),</span><br><span class="line">  api = <span class="built_in">require</span>(<span class="string">'./routes/writeJson'</span>),</span><br><span class="line">  http = <span class="built_in">require</span>(<span class="string">'http'</span>),</span><br><span class="line">  path = <span class="built_in">require</span>(<span class="string">'path'</span>),</span><br><span class="line">  bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line">  multer=<span class="built_in">require</span>(<span class="string">'multer'</span>),</span><br><span class="line">  app =  express();</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Configuration</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// all environments</span></span><br><span class="line">app.set(<span class="string">'port'</span>, process.env.PORT || <span class="number">3000</span>);</span><br><span class="line">app.use(bodyParser.json()); <span class="comment">// for parsing application/json</span></span><br><span class="line">app.use(bodyParser.urlencoded(&#123; extended: <span class="literal">true</span> &#125;)); <span class="comment">// for parsing application</span></span><br><span class="line">app.use(serveStatic(__dirname + <span class="string">'/app'</span>));</span><br><span class="line">app.use(serveStatic(__dirname + <span class="string">'/bower_components'</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Routes</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">// redirect all others to the index (HTML5 history)</span></span><br><span class="line">app.get(<span class="string">'/'</span>, routes.index);</span><br><span class="line"></span><br><span class="line"><span class="comment">// JSON API</span></span><br><span class="line">app.post(<span class="string">'/api/save'</span>, api.writeJson);</span><br><span class="line">app.get(<span class="string">'/api/get'</span>, api.readJson);</span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Start Server</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line">http.createServer(app).listen(app.get(<span class="string">'port'</span>), <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Express server listening on port '</span> + app.get(<span class="string">'port'</span>));</span><br><span class="line">  <span class="built_in">console</span>.log(__dirname);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'--=='</span> + <span class="built_in">JSON</span>.stringify(process.env));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = app;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="使用_npm_+_grunt初始化项目">使用 npm + grunt初始化项目</h2><h3 id="创建package-json文件，可以从其他项目产品copy修改，_也可以通过npm_init构建">创建package.json文件，可以从其他项目产品co]]>
-    </summary>
-    
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="Front-end" scheme="http://yoursite.com/categories/Front-end/"/>
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -203,7 +268,7 @@
     <link href="http://yoursite.com/2015/10/25/JavaScript_Deferred/"/>
     <id>http://yoursite.com/2015/10/25/JavaScript_Deferred/</id>
     <published>2015-10-24T16:00:00.000Z</published>
-    <updated>2015-10-25T23:31:03.550Z</updated>
+    <updated>2015-12-12T09:16:14.730Z</updated>
     <content type="html"><![CDATA[<h3 id="一-_概念">一. 概念</h3><ol>
 <li>Promise， 为Deferred的超类， 表示一个异步操作的最终结果，promise无resolve()方法，只用来定义绑定回调函数， 在Ajax请求中，返回的Promise对象</li>
 <li>Deferred：英文意思是“延迟”，也就是延迟到未来某个点在执行。在传统的Ajax请求中， 放请求回调时，存在着两个缺陷：<code>不管成功或者失败，都只能绑定一个回调函数</code>和和 ·<code>立即执行</code>。可以将我们的一些代码用于延迟执行。首先我们需要绑定回调函数，然后通过如下方法来决定最终结果<br>testDeffed.resolve(参数); //执行done<br> testDeffed.reject(参数); //执行fail<h3 id="二-_使用">二. 使用</h3>常用的Promise为jquery的Promise, 可以参考JQuery API文档：[<a href="http://api.jquery.com/category/deferred-object/" target="_blank" rel="external">http://api.jquery.com/category/deferred-object/</a>]<br>我们在使用JQuery的Ajax操作的时候写法如下：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">        url:<span class="string">'index.html'</span>,</span><br><span class="line">        type:<span class="string">'GET'</span>,</span><br><span class="line">        success: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'成功'</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        error: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"出错啦"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
@@ -233,9 +298,9 @@
 <li>Defer]]>
     </summary>
     
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -244,7 +309,7 @@
     <link href="http://yoursite.com/2015/10/18/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6%E5%8D%87%E7%BA%A7/"/>
     <id>http://yoursite.com/2015/10/18/项目中的第三方框架升级/</id>
     <published>2015-10-17T16:00:00.000Z</published>
-    <updated>2015-10-18T14:42:46.263Z</updated>
+    <updated>2015-12-12T09:17:27.162Z</updated>
     <content type="html"><![CDATA[<p>为公司内部做的一个运营系统， 由于在旧的系统基础上进行开发的， 系统是传统的SSH框架， Struts2使用的是2.3的版本，Spring使用过的是2.5.6的版本， Hibernate使用过的是3.0的版本， 在现在的开发中，通常会引入一些其他的第三方库， 在这些就得版本中， 通常会引发一些不知名的问题， 而且很难找到文档， 所以在这个周末， 下定决定，对其进行了升级。升级后的版本为：</p>
 <ol>
 <li>Struts： 未升级， 还是原来的2.3</li>
@@ -276,52 +341,9 @@
     <![CDATA[<p>为公司内部做的一个运营系统， 由于在旧的系统基础上进行开发的， 系统是传统的SSH框架， Struts2使用的是2.3的版本，Spring使用过的是2.5.6的版本， Hibernate使用过的是3.0的版本， 在现在的开发中，通常会引入一些其他的第三方库， 在这些就得版本]]>
     </summary>
     
-      <category term="开发" scheme="http://yoursite.com/tags/%E5%BC%80%E5%8F%91/"/>
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
-      <category term="开发" scheme="http://yoursite.com/categories/%E5%BC%80%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2015/10/13/Gradle%E5%AD%A6%E4%B9%A0%5B1%5D/"/>
-    <id>http://yoursite.com/2015/10/13/Gradle学习[1]/</id>
-    <published>2015-10-13T15:08:04.838Z</published>
-    <updated>2015-10-13T15:08:04.838Z</updated>
-    <content type="html"><![CDATA[<h3 id="Gradle中的特征">Gradle中的特征</h3><ol>
-<li>声明式编译方式以及约定优于配置的方式</li>
-<li>编程式语言的的编写方式</li>
-<li>组织（结构化）编译</li>
-<li>深层次的API</li>
-<li>支持多项目编译</li>
-<li>多元化方式管理依赖</li>
-</ol>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="Gradle中的特征">Gradle中的特征</h3><ol>
-<li>声明式编译方式以及约定优于配置的方式</li>
-<li>编程式语言的的编写方式</li>
-<li>组织（结构化）编译</li>
-<li>深层次的API</li>
-<li>支持多项目编译</li]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[MySQL主从数据库配置]]></title>
-    <link href="http://yoursite.com/2015/10/08/Mysql%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2015/10/08/Mysql主从配置/</id>
-    <published>2015-10-07T16:00:00.000Z</published>
-    <updated>2015-10-08T13:12:53.477Z</updated>
-    <content type="html"></content>
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
-    
-      <category term="Developer" scheme="http://yoursite.com/categories/Developer/"/>
+      <category term="Java编程" scheme="http://yoursite.com/categories/Java%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
@@ -355,7 +377,7 @@
     <link href="http://yoursite.com/2015/10/06/Web%E5%AE%89%E5%85%A8/"/>
     <id>http://yoursite.com/2015/10/06/Web安全/</id>
     <published>2015-10-06T09:20:46.000Z</published>
-    <updated>2015-10-06T13:00:48.433Z</updated>
+    <updated>2015-12-12T09:16:44.538Z</updated>
     <content type="html"><![CDATA[<p>这里主要介绍一些常见的web网站攻击的方式，以及概念，并不涉及如何防范， 关于防范后续再做记录</p>
 <h3 id="1-_SQL注入攻击">1. SQL注入攻击</h3><p>通过在请求中加入SQL语句片段， 在后端拼接参数时候，会拼装到待执行的SQL中,来查询出更多数据<br>如：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">select</span> username, email, <span class="keyword">desc</span> <span class="keyword">from</span> <span class="keyword">users</span> <span class="keyword">where</span> <span class="keyword">id</span>=<span class="number">1</span>;</span></span><br></pre></td></tr></table></figure></p>
 <p>在用户提交请求时候，会带入参数 ?id=1,来获取相应数据。若是不发用户会在参数中添加 :<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=<span class="number">1</span> <span class="class"><span class="keyword">union</span> <span class="title">select</span> <span class="title">password</span>, 1, 1 <span class="title">from</span> <span class="title">users</span>,</span></span><br></pre></td></tr></table></figure></p>
@@ -383,9 +405,9 @@
 <h3 id="1-_SQL注入攻击">1. SQL注入攻击</h3><p>通过在请求中加入SQL语句片段， 在后端拼接参数时候，会拼装到待执行的SQL中,来查询出更多数]]>
     </summary>
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="安全" scheme="http://yoursite.com/tags/%E5%AE%89%E5%85%A8/"/>
     
-      <category term="Hexo Blog" scheme="http://yoursite.com/categories/Hexo-Blog/"/>
+      <category term="安全" scheme="http://yoursite.com/categories/%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
@@ -394,7 +416,7 @@
     <link href="http://yoursite.com/2015/10/05/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
     <id>http://yoursite.com/2015/10/05/域名解析/</id>
     <published>2015-10-04T16:00:00.000Z</published>
-    <updated>2015-10-05T06:45:11.369Z</updated>
+    <updated>2015-12-12T09:17:35.002Z</updated>
     <content type="html"><![CDATA[<p>域名解析是把域名指向网站IP，让人们可以通过直接访问域名就能访问到网站。<br>IP地址是网络上标示站点的数字地址。域名解析就是域名到IP地址的转换过程。域名的解析工作由DNS服务器完成。<br><strong>注意</strong>：只有dns设置为iidns的域名才能在易名中国进行域名解析操作，使用其它DNS的域名请到相应的网站去进行操作。</p>
 <h3 id="1-_常用的主机记录">1. 常用的主机记录</h3><pre><code><span class="number">1</span>. www：解析后的域名为 www<span class="class">.ename</span><span class="class">.com</span> 
 <span class="number">2</span>. @：空主机头，直接解析主域名ename<span class="class">.com</span> 
@@ -433,7 +455,7 @@
     <![CDATA[<p>域名解析是把域名指向网站IP，让人们可以通过直接访问域名就能访问到网站。<br>IP地址是网络上标示站点的数字地址。域名解析就是域名到IP地址的转换过程。域名的解析工作由DNS服务器完成。<br><strong>注意</strong>：只有dns设置为iidns的域名才能在]]>
     </summary>
     
-      <category term="Tools" scheme="http://yoursite.com/tags/Tools/"/>
+      <category term="工具" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
@@ -500,7 +522,7 @@
     <link href="http://yoursite.com/2015/10/04/MSYS-Mingw/"/>
     <id>http://yoursite.com/2015/10/04/MSYS-Mingw/</id>
     <published>2015-10-03T16:00:00.000Z</published>
-    <updated>2015-10-05T06:45:04.476Z</updated>
+    <updated>2015-12-12T09:16:21.186Z</updated>
     <content type="html"><![CDATA[<h2 id="在windows中使用LInux的命令。可以通过如下方法实现">在windows中使用LInux的命令。可以通过如下方法实现</h2><h3 id="1-_使用MinGW以及其中的Linux命令套件">1. 使用MinGW以及其中的Linux命令套件</h3><pre><code>1. 介绍
     MinGW：Windows环境提供完整的开源编程工具集， 且不依赖于第三方的C运行库(DLLs), 只是一套最小化的GNU开发环境集合，并不提供GNU软件的运行环境，如需要运行环境，可以使用<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.cygwin.com/"</span>&gt;</span>Cygwin<span class="tag">&lt;/<span class="title">a</span>&gt;</span>或者
     MSYS：是一套GUN工具集， 如 bash,make,gawk以及grep， 允许你通过传统的UNIX工具来构建应用， 其目标在于补充MinGW和CMD shell的不足，作为cmd.exe的替换.需要与MinGW同时使用
@@ -528,7 +550,7 @@
     <![CDATA[<h2 id="在windows中使用LInux的命令。可以通过如下方法实现">在windows中使用LInux的命令。可以通过如下方法实现</h2><h3 id="1-_使用MinGW以及其中的Linux命令套件">1. 使用MinGW以及其中的Linux命令套件</h3><p]]>
     </summary>
     
-      <category term="Tools" scheme="http://yoursite.com/tags/Tools/"/>
+      <category term="工具" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
